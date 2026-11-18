@@ -1,0 +1,3802 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalTrack - Controle Pessoal de Saúde</title>
+    <meta name="theme-color" content="#0d9488">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="VitalTrack">
+    <style id="tailwind-compilado">
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-amber-800: oklch(47.3% 0.137 46.201);
+    --color-amber-900: oklch(41.4% 0.112 45.904);
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-emerald-600: oklch(59.6% 0.145 163.225);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-teal-50: oklch(98.4% 0.014 180.72);
+    --color-teal-100: oklch(95.3% 0.051 180.801);
+    --color-teal-300: oklch(85.5% 0.138 181.071);
+    --color-teal-400: oklch(77.7% 0.152 181.912);
+    --color-teal-500: oklch(70.4% 0.14 182.503);
+    --color-teal-600: oklch(60% 0.118 184.704);
+    --color-teal-700: oklch(51.1% 0.096 186.391);
+    --color-teal-900: oklch(38.6% 0.063 188.416);
+    --color-sky-50: oklch(97.7% 0.013 236.62);
+    --color-sky-100: oklch(95.1% 0.026 236.824);
+    --color-sky-300: oklch(82.8% 0.111 230.318);
+    --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-sky-500: oklch(68.5% 0.169 237.323);
+    --color-sky-600: oklch(58.8% 0.158 241.966);
+    --color-sky-700: oklch(50% 0.134 242.749);
+    --color-sky-800: oklch(44.3% 0.11 240.79);
+    --color-sky-900: oklch(39.1% 0.09 240.876);
+    --color-indigo-50: oklch(96.2% 0.018 272.314);
+    --color-indigo-100: oklch(93% 0.034 272.788);
+    --color-indigo-300: oklch(78.5% 0.115 274.713);
+    --color-indigo-400: oklch(67.3% 0.182 276.935);
+    --color-indigo-500: oklch(58.5% 0.233 277.117);
+    --color-indigo-600: oklch(51.1% 0.262 276.966);
+    --color-indigo-700: oklch(45.7% 0.24 277.023);
+    --color-indigo-900: oklch(35.9% 0.144 278.697);
+    --color-purple-50: oklch(97.7% 0.014 308.299);
+    --color-purple-400: oklch(71.4% 0.203 305.504);
+    --color-purple-500: oklch(62.7% 0.265 303.9);
+    --color-purple-600: oklch(55.8% 0.288 302.321);
+    --color-purple-900: oklch(38.1% 0.176 304.987);
+    --color-rose-50: oklch(96.9% 0.015 12.422);
+    --color-rose-100: oklch(94.1% 0.03 12.58);
+    --color-rose-300: oklch(81% 0.117 11.638);
+    --color-rose-400: oklch(71.2% 0.194 13.428);
+    --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
+    --color-rose-700: oklch(51.4% 0.222 16.935);
+    --color-rose-800: oklch(45.5% 0.188 13.697);
+    --color-rose-900: oklch(41% 0.159 10.272);
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-2xl: 42rem;
+    --container-4xl: 56rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-wider: 0.05em;
+    --leading-tight: 1.25;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --blur-sm: 8px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .inset-0 {
+    inset: 0px;
+  }
+  .top-0 {
+    top: 0px;
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-2\.5 {
+    top: calc(var(--spacing) * 2.5);
+  }
+  .right-3 {
+    right: calc(var(--spacing) * 3);
+  }
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+  .bottom-5 {
+    bottom: calc(var(--spacing) * 5);
+  }
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+  .z-30 {
+    z-index: 30;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .order-2 {
+    order: 2;
+  }
+  .col-span-full {
+    grid-column: 1 / -1;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .mx-1 {
+    margin-inline: var(--spacing);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-1\.5 {
+    margin-top: calc(var(--spacing) * 1.5);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mr-1\.5 {
+    margin-right: calc(var(--spacing) * 1.5);
+  }
+  .mb-0\.5 {
+    margin-bottom: calc(var(--spacing) * 0.5);
+  }
+  .mb-1 {
+    margin-bottom: var(--spacing);
+  }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .ml-1 {
+    margin-left: var(--spacing);
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .table {
+    display: table;
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-52 {
+    height: calc(var(--spacing) * 52);
+  }
+  .h-56 {
+    height: calc(var(--spacing) * 56);
+  }
+  .h-60 {
+    height: calc(var(--spacing) * 60);
+  }
+  .h-full {
+    height: 100%;
+  }
+  .max-h-\[75vh\] {
+    max-height: 75vh;
+  }
+  .min-h-\[4rem\] {
+    min-height: 4rem;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .min-w-0 {
+    min-width: 0px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .translate-y-2 {
+    --tw-translate-y: calc(var(--spacing) * 2);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize {
+    resize: both;
+  }
+  .resize-none {
+    resize: none;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  .items-baseline {
+    align-items: baseline;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-1 {
+    gap: var(--spacing);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  :where(.space-y-2 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-6 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.divide-y > :not(:last-child)) {
+    --tw-divide-y-reverse: 0;
+    border-bottom-style: var(--tw-border-style);
+    border-top-style: var(--tw-border-style);
+    border-top-width: calc(1px * var(--tw-divide-y-reverse));
+    border-bottom-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  }
+  :where(.divide-slate-200 > :not(:last-child)) {
+    border-color: var(--color-slate-200);
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .border-slate-100 {
+    border-color: var(--color-slate-100);
+  }
+  .border-slate-200 {
+    border-color: var(--color-slate-200);
+  }
+  .border-slate-300 {
+    border-color: var(--color-slate-300);
+  }
+  .border-teal-500 {
+    border-color: var(--color-teal-500);
+  }
+  .border-teal-600 {
+    border-color: var(--color-teal-600);
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
+  }
+  .bg-emerald-100 {
+    background-color: var(--color-emerald-100);
+  }
+  .bg-indigo-50 {
+    background-color: var(--color-indigo-50);
+  }
+  .bg-indigo-100 {
+    background-color: var(--color-indigo-100);
+  }
+  .bg-indigo-500 {
+    background-color: var(--color-indigo-500);
+  }
+  .bg-purple-50 {
+    background-color: var(--color-purple-50);
+  }
+  .bg-purple-600 {
+    background-color: var(--color-purple-600);
+  }
+  .bg-rose-50 {
+    background-color: var(--color-rose-50);
+  }
+  .bg-rose-100 {
+    background-color: var(--color-rose-100);
+  }
+  .bg-rose-600 {
+    background-color: var(--color-rose-600);
+  }
+  .bg-sky-50 {
+    background-color: var(--color-sky-50);
+  }
+  .bg-sky-100 {
+    background-color: var(--color-sky-100);
+  }
+  .bg-sky-500 {
+    background-color: var(--color-sky-500);
+  }
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
+  }
+  .bg-slate-50\/50 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.003 247.858) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-50) 50%, transparent);
+    }
+  }
+  .bg-slate-50\/70 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.003 247.858) 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-50) 70%, transparent);
+    }
+  }
+  .bg-slate-100 {
+    background-color: var(--color-slate-100);
+  }
+  .bg-slate-800 {
+    background-color: var(--color-slate-800);
+  }
+  .bg-slate-900\/60 {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
+    }
+  }
+  .bg-teal-50 {
+    background-color: var(--color-teal-50);
+  }
+  .bg-teal-50\/50 {
+    background-color: color-mix(in srgb, oklch(98.4% 0.014 180.72) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-teal-50) 50%, transparent);
+    }
+  }
+  .bg-teal-100 {
+    background-color: var(--color-teal-100);
+  }
+  .bg-teal-500 {
+    background-color: var(--color-teal-500);
+  }
+  .bg-teal-600 {
+    background-color: var(--color-teal-600);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/70 {
+    background-color: color-mix(in srgb, #fff 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
+    }
+  }
+  .p-1 {
+    padding: var(--spacing);
+  }
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-3\.5 {
+    padding-inline: calc(var(--spacing) * 3.5);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-2\.5 {
+    padding-top: calc(var(--spacing) * 2.5);
+  }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-amber-400 {
+    color: var(--color-amber-400);
+  }
+  .text-amber-600 {
+    color: var(--color-amber-600);
+  }
+  .text-amber-800 {
+    color: var(--color-amber-800);
+  }
+  .text-amber-900 {
+    color: var(--color-amber-900);
+  }
+  .text-emerald-500 {
+    color: var(--color-emerald-500);
+  }
+  .text-emerald-600 {
+    color: var(--color-emerald-600);
+  }
+  .text-emerald-700 {
+    color: var(--color-emerald-700);
+  }
+  .text-emerald-800 {
+    color: var(--color-emerald-800);
+  }
+  .text-indigo-600 {
+    color: var(--color-indigo-600);
+  }
+  .text-indigo-700 {
+    color: var(--color-indigo-700);
+  }
+  .text-purple-600 {
+    color: var(--color-purple-600);
+  }
+  .text-rose-500 {
+    color: var(--color-rose-500);
+  }
+  .text-rose-600 {
+    color: var(--color-rose-600);
+  }
+  .text-rose-700 {
+    color: var(--color-rose-700);
+  }
+  .text-rose-800 {
+    color: var(--color-rose-800);
+  }
+  .text-sky-600 {
+    color: var(--color-sky-600);
+  }
+  .text-sky-700 {
+    color: var(--color-sky-700);
+  }
+  .text-sky-800 {
+    color: var(--color-sky-800);
+  }
+  .text-slate-400 {
+    color: var(--color-slate-400);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-600 {
+    color: var(--color-slate-600);
+  }
+  .text-slate-700 {
+    color: var(--color-slate-700);
+  }
+  .text-slate-800 {
+    color: var(--color-slate-800);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
+  }
+  .text-teal-600 {
+    color: var(--color-teal-600);
+  }
+  .text-teal-700 {
+    color: var(--color-teal-700);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-teal-600\/20 {
+    --tw-shadow-color: color-mix(in srgb, oklch(60% 0.118 184.704) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-teal-600) 20%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .ring-offset-2 {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  }
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .peer-checked\:ring-2:is(:where(.peer):checked ~ *) {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .peer-checked\:ring-amber-500:is(:where(.peer):checked ~ *) {
+    --tw-ring-color: var(--color-amber-500);
+  }
+  .peer-checked\:ring-indigo-500:is(:where(.peer):checked ~ *) {
+    --tw-ring-color: var(--color-indigo-500);
+  }
+  .peer-checked\:ring-purple-500:is(:where(.peer):checked ~ *) {
+    --tw-ring-color: var(--color-purple-500);
+  }
+  .peer-checked\:ring-rose-500:is(:where(.peer):checked ~ *) {
+    --tw-ring-color: var(--color-rose-500);
+  }
+  .peer-checked\:ring-teal-500:is(:where(.peer):checked ~ *) {
+    --tw-ring-color: var(--color-teal-500);
+  }
+  @media (hover: hover) {
+    .hover\:bg-amber-700:hover {
+      background-color: var(--color-amber-700);
+    }
+    .hover\:bg-emerald-100:hover {
+      background-color: var(--color-emerald-100);
+    }
+    .hover\:bg-indigo-100:hover {
+      background-color: var(--color-indigo-100);
+    }
+    .hover\:bg-rose-100:hover {
+      background-color: var(--color-rose-100);
+    }
+    .hover\:bg-rose-700:hover {
+      background-color: var(--color-rose-700);
+    }
+    .hover\:bg-sky-100:hover {
+      background-color: var(--color-sky-100);
+    }
+    .hover\:bg-slate-50\/80:hover {
+      background-color: color-mix(in srgb, oklch(98.4% 0.003 247.858) 80%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-slate-50\/80:hover {
+        background-color: color-mix(in oklab, var(--color-slate-50) 80%, transparent);
+      }
+    }
+    .hover\:bg-slate-100:hover {
+      background-color: var(--color-slate-100);
+    }
+    .hover\:bg-slate-200:hover {
+      background-color: var(--color-slate-200);
+    }
+    .hover\:bg-teal-50:hover {
+      background-color: var(--color-teal-50);
+    }
+    .hover\:bg-teal-700:hover {
+      background-color: var(--color-teal-700);
+    }
+    .hover\:text-rose-600:hover {
+      color: var(--color-rose-600);
+    }
+    .hover\:text-slate-600:hover {
+      color: var(--color-slate-600);
+    }
+    .hover\:text-slate-700:hover {
+      color: var(--color-slate-700);
+    }
+    .hover\:text-slate-900:hover {
+      color: var(--color-slate-900);
+    }
+    .hover\:text-teal-600:hover {
+      color: var(--color-teal-600);
+    }
+    .hover\:underline:hover {
+      text-decoration-line: underline;
+    }
+  }
+  .focus\:border-teal-500:focus {
+    border-color: var(--color-teal-500);
+  }
+  .active\:scale-\[0\.99\]:active {
+    scale: 0.99;
+  }
+  @media (width >= 40rem) {
+    .sm\:order-3 {
+      order: 3;
+    }
+    .sm\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .sm\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+    .sm\:text-3xl {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+    .sm\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+    .sm\:text-lg {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+    .sm\:text-sm {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+    .sm\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  @media (width >= 48rem) {
+    .md\:col-span-6 {
+      grid-column: span 6 / span 6;
+    }
+    .md\:inline {
+      display: inline;
+    }
+    .md\:grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .md\:flex-row {
+      flex-direction: row;
+    }
+  }
+  @media (width >= 64rem) {
+    .lg\:col-span-5 {
+      grid-column: span 5 / span 5;
+    }
+    .lg\:col-span-7 {
+      grid-column: span 7 / span 7;
+    }
+    .lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .lg\:grid-cols-12 {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+    .lg\:flex-row {
+      flex-direction: row;
+    }
+    .lg\:items-center {
+      align-items: center;
+    }
+    .lg\:px-8 {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  :where(.dark\:divide-slate-700:where(.dark, .dark *) > :not(:last-child)) {
+    border-color: var(--color-slate-700);
+  }
+  .dark\:border-amber-700:where(.dark, .dark *) {
+    border-color: var(--color-amber-700);
+  }
+  .dark\:border-slate-600:where(.dark, .dark *) {
+    border-color: var(--color-slate-600);
+  }
+  .dark\:border-slate-700:where(.dark, .dark *) {
+    border-color: var(--color-slate-700);
+  }
+  .dark\:border-slate-700\/80:where(.dark, .dark *) {
+    border-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-slate-700) 80%, transparent);
+    }
+  }
+  .dark\:border-slate-800:where(.dark, .dark *) {
+    border-color: var(--color-slate-800);
+  }
+  .dark\:bg-amber-900\/20:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(41.4% 0.112 45.904) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-amber-900) 20%, transparent);
+    }
+  }
+  .dark\:bg-emerald-900\/30:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(37.8% 0.077 168.94) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-emerald-900) 30%, transparent);
+    }
+  }
+  .dark\:bg-indigo-900\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(35.9% 0.144 278.697) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-indigo-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-indigo-900\/50:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(35.9% 0.144 278.697) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-indigo-900) 50%, transparent);
+    }
+  }
+  .dark\:bg-purple-900\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(38.1% 0.176 304.987) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-purple-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-rose-900\/30:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(41% 0.159 10.272) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-900) 30%, transparent);
+    }
+  }
+  .dark\:bg-rose-900\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(41% 0.159 10.272) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-sky-900\/30:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(39.1% 0.09 240.876) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-sky-900) 30%, transparent);
+    }
+  }
+  .dark\:bg-sky-900\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(39.1% 0.09 240.876) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-sky-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-slate-600:where(.dark, .dark *) {
+    background-color: var(--color-slate-600);
+  }
+  .dark\:bg-slate-700:where(.dark, .dark *) {
+    background-color: var(--color-slate-700);
+  }
+  .dark\:bg-slate-700\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-700) 40%, transparent);
+    }
+  }
+  .dark\:bg-slate-700\/50:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+    }
+  }
+  .dark\:bg-slate-800:where(.dark, .dark *) {
+    background-color: var(--color-slate-800);
+  }
+  .dark\:bg-slate-800\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-800) 40%, transparent);
+    }
+  }
+  .dark\:bg-slate-800\/50:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-800) 50%, transparent);
+    }
+  }
+  .dark\:bg-slate-800\/80:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(27.9% 0.041 260.031) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-800) 80%, transparent);
+    }
+  }
+  .dark\:bg-slate-900:where(.dark, .dark *) {
+    background-color: var(--color-slate-900);
+  }
+  .dark\:bg-slate-900\/50:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 50%, transparent);
+    }
+  }
+  .dark\:bg-slate-900\/60:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
+    }
+  }
+  .dark\:bg-teal-900\/20:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(38.6% 0.063 188.416) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-teal-900) 20%, transparent);
+    }
+  }
+  .dark\:bg-teal-900\/40:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(38.6% 0.063 188.416) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-teal-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-teal-900\/50:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(38.6% 0.063 188.416) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-teal-900) 50%, transparent);
+    }
+  }
+  .dark\:text-amber-200:where(.dark, .dark *) {
+    color: var(--color-amber-200);
+  }
+  .dark\:text-amber-400:where(.dark, .dark *) {
+    color: var(--color-amber-400);
+  }
+  .dark\:text-emerald-300:where(.dark, .dark *) {
+    color: var(--color-emerald-300);
+  }
+  .dark\:text-indigo-300:where(.dark, .dark *) {
+    color: var(--color-indigo-300);
+  }
+  .dark\:text-indigo-400:where(.dark, .dark *) {
+    color: var(--color-indigo-400);
+  }
+  .dark\:text-purple-400:where(.dark, .dark *) {
+    color: var(--color-purple-400);
+  }
+  .dark\:text-rose-300:where(.dark, .dark *) {
+    color: var(--color-rose-300);
+  }
+  .dark\:text-rose-400:where(.dark, .dark *) {
+    color: var(--color-rose-400);
+  }
+  .dark\:text-sky-300:where(.dark, .dark *) {
+    color: var(--color-sky-300);
+  }
+  .dark\:text-sky-400:where(.dark, .dark *) {
+    color: var(--color-sky-400);
+  }
+  .dark\:text-slate-100:where(.dark, .dark *) {
+    color: var(--color-slate-100);
+  }
+  .dark\:text-slate-200:where(.dark, .dark *) {
+    color: var(--color-slate-200);
+  }
+  .dark\:text-slate-300:where(.dark, .dark *) {
+    color: var(--color-slate-300);
+  }
+  .dark\:text-slate-400:where(.dark, .dark *) {
+    color: var(--color-slate-400);
+  }
+  .dark\:text-teal-300:where(.dark, .dark *) {
+    color: var(--color-teal-300);
+  }
+  .dark\:text-teal-400:where(.dark, .dark *) {
+    color: var(--color-teal-400);
+  }
+  .dark\:text-white:where(.dark, .dark *) {
+    color: var(--color-white);
+  }
+  .dark\:ring-offset-slate-900:where(.dark, .dark *) {
+    --tw-ring-offset-color: var(--color-slate-900);
+  }
+  @media (hover: hover) {
+    .dark\:hover\:bg-indigo-900\/60:where(.dark, .dark *):hover {
+      background-color: color-mix(in srgb, oklch(35.9% 0.144 278.697) 60%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:hover\:bg-indigo-900\/60:where(.dark, .dark *):hover {
+        background-color: color-mix(in oklab, var(--color-indigo-900) 60%, transparent);
+      }
+    }
+    .dark\:hover\:bg-slate-600:where(.dark, .dark *):hover {
+      background-color: var(--color-slate-600);
+    }
+    .dark\:hover\:bg-slate-700:where(.dark, .dark *):hover {
+      background-color: var(--color-slate-700);
+    }
+    .dark\:hover\:bg-slate-700\/30:where(.dark, .dark *):hover {
+      background-color: color-mix(in srgb, oklch(37.2% 0.044 257.287) 30%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .dark\:hover\:bg-slate-700\/30:where(.dark, .dark *):hover {
+        background-color: color-mix(in oklab, var(--color-slate-700) 30%, transparent);
+      }
+    }
+    .dark\:hover\:text-slate-200:where(.dark, .dark *):hover {
+      color: var(--color-slate-200);
+    }
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-slate-200, currentColor);
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-divide-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-divide-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+    }
+  }
+}
+
+    </style>
+
+    <style>
+        /* Ícones embutidos (substituem Font Awesome, que não carrega em alguns visualizadores) */
+        i.fa-solid, i.fa-brands { display:inline-block; width:1em; height:1em; vertical-align:-0.125em; background-color:currentColor; -webkit-mask:var(--ic) center/contain no-repeat; mask:var(--ic) center/contain no-repeat; }
+        .fa-xmark { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='M6 6l12 12'/%3E%3C/svg%3E"); }
+        .fa-user-plus { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M19 8v6'/%3E%3Cpath d='M22 11h-6'/%3E%3C/svg%3E"); }
+        .fa-trash { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6'/%3E%3Cpath d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/%3E%3Cpath d='M10 11v6'/%3E%3Cpath d='M14 11v6'/%3E%3C/svg%3E"); }
+        .fa-trash-can { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6'/%3E%3Cpath d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/%3E%3Cpath d='M10 11v6'/%3E%3Cpath d='M14 11v6'/%3E%3C/svg%3E"); }
+        .fa-pen { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E"); }
+        .fa-moon { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'/%3E%3C/svg%3E"); }
+        .fa-sun { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2'/%3E%3Cpath d='M12 20v2'/%3E%3Cpath d='M4.93 4.93l1.41 1.41'/%3E%3Cpath d='M17.66 17.66l1.41 1.41'/%3E%3Cpath d='M2 12h2'/%3E%3Cpath d='M20 12h2'/%3E%3Cpath d='M6.34 17.66l-1.41 1.41'/%3E%3Cpath d='M19.07 4.93l-1.41 1.41'/%3E%3C/svg%3E"); }
+        .fa-heart-pulse { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'/%3E%3Cpath d='M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27'/%3E%3C/svg%3E"); }
+        .fa-heart { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'/%3E%3C/svg%3E"); }
+        .fa-floppy-disk { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z'/%3E%3Cpath d='M17 21v-8H7v8'/%3E%3Cpath d='M7 3v5h8'/%3E%3C/svg%3E"); }
+        .fa-file-medical { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M12 18v-6'/%3E%3Cpath d='M9 15h6'/%3E%3C/svg%3E"); }
+        .fa-file-csv { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z'/%3E%3Cpath d='M14 2v6h6'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3Cpath d='M10 9H8'/%3E%3C/svg%3E"); }
+        .fa-download { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpath d='M7 10l5 5 5-5'/%3E%3Cpath d='M12 15V3'/%3E%3C/svg%3E"); }
+        .fa-upload { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpath d='M17 8l-5-5-5 5'/%3E%3Cpath d='M12 3v12'/%3E%3C/svg%3E"); }
+        .fa-arrow-up-from-bracket { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpath d='M17 8l-5-5-5 5'/%3E%3Cpath d='M12 3v12'/%3E%3C/svg%3E"); }
+        .fa-check { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E"); }
+        .fa-bullseye { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E"); }
+        .fa-weight-scale { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M7.5 10a6 6 0 0 1 9 0'/%3E%3Cpath d='M12 10l1.5-2.5'/%3E%3C/svg%3E"); }
+        .fa-sliders { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 21v-7'/%3E%3Cpath d='M4 10V3'/%3E%3Cpath d='M12 21v-9'/%3E%3Cpath d='M12 8V3'/%3E%3Cpath d='M20 21v-5'/%3E%3Cpath d='M20 12V3'/%3E%3Cpath d='M1 14h6'/%3E%3Cpath d='M9 8h6'/%3E%3Cpath d='M17 16h6'/%3E%3C/svg%3E"); }
+        .fa-ruler-horizontal { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z'/%3E%3Cpath d='M14.5 12.5l2-2'/%3E%3Cpath d='M11.5 9.5l2-2'/%3E%3Cpath d='M8.5 6.5l2-2'/%3E%3Cpath d='M17.5 15.5l2-2'/%3E%3C/svg%3E"); }
+        .fa-print { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E%3Crect x='6' y='14' width='12' height='8'/%3E%3C/svg%3E"); }
+        .fa-mobile-screen-button { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='2' width='14' height='20' rx='2'/%3E%3Cpath d='M12 18h.01'/%3E%3C/svg%3E"); }
+        .fa-magnifying-glass { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.3-4.3'/%3E%3C/svg%3E"); }
+        .fa-leaf { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'/%3E%3C/svg%3E"); }
+        .fa-droplet { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'/%3E%3C/svg%3E"); }
+        .fa-clock-rotate-left { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8'/%3E%3Cpath d='M3 3v5h5'/%3E%3Cpath d='M12 7v5l4 2'/%3E%3C/svg%3E"); }
+        .fa-clipboard-list { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='8' y='2' width='8' height='4' rx='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3Cpath d='M12 11h4'/%3E%3Cpath d='M12 16h4'/%3E%3Cpath d='M8 11h.01'/%3E%3Cpath d='M8 16h.01'/%3E%3C/svg%3E"); }
+        .fa-circle-plus { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 12h8'/%3E%3Cpath d='M12 8v8'/%3E%3C/svg%3E"); }
+        .fa-circle-check { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9 12l2 2 4-4'/%3E%3C/svg%3E"); }
+        .fa-child-reaching { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E"); }
+        .fa-chart-line { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3v18h18'/%3E%3Cpath d='M19 9l-5 5-4-4-3 3'/%3E%3C/svg%3E"); }
+        .fa-android { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 17a7 7 0 0 1 14 0Z'/%3E%3Cpath d='M8 6l1.5 2.5'/%3E%3Cpath d='M16 6l-1.5 2.5'/%3E%3Cpath d='M9.5 13h.01'/%3E%3Cpath d='M14.5 13h.01'/%3E%3C/svg%3E"); }
+        .fa-apple { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 8c-2-2-6-1-6 4 0 4 2.5 8 4.5 8 1 0 1-.5 1.5-.5s.5.5 1.5.5c2 0 4.5-4 4.5-8 0-5-4-6-6-4Z'/%3E%3Cpath d='M12 8c0-2 1-4 3-5'/%3E%3C/svg%3E"); }
+        body {
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .tab-active {
+            border-bottom: 2px solid #0d9488;
+            color: #0d9488;
+            font-weight: 600;
+        }
+        .dark .tab-active {
+            border-bottom: 2px solid #2dd4bf;
+            color: #2dd4bf;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+        @media print {
+            body {
+                background: #ffffff !important;
+                color: #0f172a !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            @page {
+                margin: 1.5cm;
+                size: A4;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
+
+    <!-- Notificação Toast -->
+    <div id="toast-container" class="no-print fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Modal de Confirmação Customizado -->
+    <div id="confirm-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-md w-full p-6 border border-slate-200 dark:border-slate-700">
+            <h3 id="modal-title" class="text-base font-bold text-slate-900 dark:text-white mb-2">Confirmação</h3>
+            <p id="modal-message" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">Tem certeza que deseja prosseguir?</p>
+            <div class="flex items-center justify-end gap-3">
+                <button type="button" id="modal-cancel" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 text-xs font-semibold transition">Cancelar</button>
+                <button type="button" id="modal-confirm" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold transition">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Gerenciamento de Metas & Perfis Familiares -->
+    <div id="profiles-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-2xl w-full border border-slate-200 dark:border-slate-700 overflow-hidden my-8">
+            <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Metas & Perfis Familiares</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Configure altura, metas pessoais e membros da família</p>
+                    </div>
+                </div>
+                <button type="button" onclick="closeProfilesModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-6 grid grid-cols-1 md:grid-cols-12 gap-6 max-h-[75vh] overflow-y-auto">
+                <!-- Lista de Perfis Existentes -->
+                <div class="md:col-span-6 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Membros Cadastrados</h4>
+                    <div id="profiles-list" class="space-y-2">
+                        <!-- Preenchido via JS -->
+                    </div>
+                </div>
+
+                <!-- Formulário de Criação / Edição de Perfil -->
+                <div class="md:col-span-6 bg-slate-50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 id="profile-form-title" class="text-xs font-bold uppercase tracking-wider text-teal-700 dark:text-teal-400">Adicionar Novo Membro</h4>
+                        <button type="button" id="cancel-profile-edit" onclick="resetProfileForm()" class="hidden text-xs text-rose-500 hover:underline">Cancelar</button>
+                    </div>
+                    <form id="profile-form" class="space-y-3">
+                        <input type="hidden" id="prof-id">
+                        <div>
+                            <label for="prof-name" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Nome *</label>
+                            <input type="text" id="prof-name" required placeholder="Ex: Victor, Nathany..."
+                                class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div>
+                                <label for="prof-relation" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Parentesco / Etiqueta</label>
+                                <input type="text" id="prof-relation" placeholder="Ex: Titular, Esposa"
+                                    class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                            </div>
+                            <div>
+                                <label for="prof-height" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Altura (cm)</label>
+                                <input type="number" id="prof-height" placeholder="Ex: 175" min="40" max="250"
+                                    class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                            </div>
+                        </div>
+
+                        <!-- Metas Pessoais -->
+                        <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
+                            <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Metas Individuais (Opcional)</p>
+                            <div class="grid grid-cols-2 gap-2.5">
+                                <div>
+                                    <label for="prof-target-weight" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Peso Alvo (kg)</label>
+                                    <input type="number" step="0.1" id="prof-target-weight" placeholder="Ex: 75.0" min="20" max="300"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-1.5 text-sm focus:border-teal-500 outline-none">
+                                </div>
+                                <div>
+                                    <label for="prof-target-waist" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Meta Cintura (cm)</label>
+                                    <input type="number" step="0.5" id="prof-target-waist" placeholder="Ex: 80" min="30" max="200"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-1.5 text-sm focus:border-teal-500 outline-none">
+                                </div>
+                                <div>
+                                    <label for="prof-target-calories" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Meta Calorias (kcal)</label>
+                                    <input type="number" id="prof-target-calories" placeholder="Ex: 2200" min="500" max="10000"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-1.5 text-sm focus:border-teal-500 outline-none">
+                                </div>
+                                <div>
+                                    <label for="prof-target-water" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Meta Água (L)</label>
+                                    <input type="number" step="0.1" id="prof-target-water" placeholder="Ex: 3.0" min="0.5" max="15"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-1.5 text-sm focus:border-teal-500 outline-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="prof-birthdate" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Data de Nascimento (Opcional)</label>
+                            <input type="date" id="prof-birthdate"
+                                class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1.5">Cor do Avatar</label>
+                            <div class="flex items-center gap-2">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="prof-color" value="#0d9488" checked class="peer sr-only">
+                                    <span class="block w-7 h-7 rounded-full bg-teal-600 ring-offset-2 dark:ring-offset-slate-900 peer-checked:ring-2 peer-checked:ring-teal-500 transition"></span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="prof-color" value="#6366f1" class="peer sr-only">
+                                    <span class="block w-7 h-7 rounded-full bg-indigo-500 ring-offset-2 dark:ring-offset-slate-900 peer-checked:ring-2 peer-checked:ring-indigo-500 transition"></span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="prof-color" value="#e11d48" class="peer sr-only">
+                                    <span class="block w-7 h-7 rounded-full bg-rose-600 ring-offset-2 dark:ring-offset-slate-900 peer-checked:ring-2 peer-checked:ring-rose-500 transition"></span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="prof-color" value="#d97706" class="peer sr-only">
+                                    <span class="block w-7 h-7 rounded-full bg-amber-600 ring-offset-2 dark:ring-offset-slate-900 peer-checked:ring-2 peer-checked:ring-amber-500 transition"></span>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="prof-color" value="#9333ea" class="peer sr-only">
+                                    <span class="block w-7 h-7 rounded-full bg-purple-600 ring-offset-2 dark:ring-offset-slate-900 peer-checked:ring-2 peer-checked:ring-purple-500 transition"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" id="save-profile-btn" class="w-full py-2.5 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs shadow-sm transition flex items-center justify-center gap-1.5 mt-2">
+                            <i class="fa-solid fa-user-plus"></i> <span>Salvar Perfil</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pré-visualização de Relatório Médico -->
+    <div id="report-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 overflow-y-auto">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-4xl w-full border border-slate-200 dark:border-slate-700 overflow-hidden my-8">
+            <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex flex-wrap items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800/80">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                        <i class="fa-solid fa-file-medical text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white">Relatório Executivo para Consulta Médica</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Resumo baseado nos filtros atuais da tabela de histórico</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="triggerPrintReport()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold shadow-sm transition flex items-center gap-2">
+                        <i class="fa-solid fa-print"></i> Imprimir / Salvar PDF
+                    </button>
+                    <button type="button" onclick="closeReportModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="report-modal-body" class="p-6 max-h-[75vh] overflow-y-auto bg-white text-slate-900">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Instruções de Instalação PWA -->
+    <div id="pwa-help-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-md w-full p-6 border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2.5 text-teal-600 dark:text-teal-400">
+                    <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white">Instalar na Tela Inicial</h3>
+                </div>
+                <button type="button" onclick="closePwaHelpModal()" class="p-1.5 rounded-lg text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                    <p class="font-bold text-slate-900 dark:text-white mb-1"><i class="fa-brands fa-android text-emerald-500 mr-1.5"></i>Android (Chrome / Edge)</p>
+                    <p>Toque no menu <strong>(⋮)</strong> no canto superior direito do navegador e selecione <strong>"Adicionar à tela inicial"</strong> ou <strong>"Instalar aplicativo"</strong>.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+                    <p class="font-bold text-slate-900 dark:text-white mb-1"><i class="fa-brands fa-apple text-slate-800 dark:text-white mr-1.5"></i>iPhone / iPad (Safari)</p>
+                    <p>Toque no botão <strong>Compartilhar</strong> <i class="fa-solid fa-arrow-up-from-bracket mx-1"></i> na barra inferior e escolha <strong>"Adicionar à Tela de Início"</strong>.</p>
+                </div>
+            </div>
+            <div class="mt-5 flex justify-end">
+                <button type="button" onclick="closePwaHelpModal()" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold transition">
+                    Entendi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container Exclusivo de Impressão -->
+    <div id="printable-area" class="hidden print-only"></div>
+
+    <!-- Cabeçalho / Navbar -->
+    <header class="no-print bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[4rem] py-2 flex flex-wrap items-center justify-between gap-3">
+            <!-- Logo e Seletor de Perfil -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-md shadow-teal-600/20 shrink-0">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-tight">VitalTrack</h1>
+                    <div class="flex items-center gap-2">
+                        <select id="profile-selector" onchange="switchActiveProfile(this.value)" aria-label="Selecionar Perfil"
+                            class="text-xs font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 rounded-lg px-2 py-0.5 outline-none cursor-pointer">
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões de Ação do Topo -->
+            <div class="flex items-center gap-2 order-2 sm:order-3">
+                <button type="button" onclick="openProfilesModal()" title="Gerenciar Metas e Perfis"
+                    class="px-2.5 py-1.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-teal-50 dark:hover:bg-slate-700 text-teal-700 dark:text-teal-300 text-xs font-semibold shadow-sm border border-slate-200 dark:border-slate-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <span>Metas & Perfil</span>
+                </button>
+                <button id="pwa-install-btn" type="button" onclick="installPWA()" class="hidden px-3 py-1.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white transition flex items-center gap-1.5 text-xs font-semibold shadow-sm">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Instalar</span>
+                </button>
+                <button type="button" onclick="openReportModal()" title="Relatório Médico"
+                    class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:hover:bg-indigo-900/60 dark:text-indigo-300 transition flex items-center gap-1.5 text-xs font-semibold">
+                    <i class="fa-solid fa-file-medical"></i>
+                    <span class="hidden md:inline">Relatório</span>
+                </button>
+                <button id="theme-toggle" type="button" aria-label="Alternar tema" title="Alternar Tema"
+                    class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-slate-200 transition">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="no-print flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <!-- Lembrete de backup -->
+        <div id="backup-banner" class="hidden flex-wrap items-center justify-between gap-3 px-4 py-3 rounded-2xl border border-amber-300 bg-amber-50 text-amber-900 dark:bg-amber-900/20 dark:border-amber-700 dark:text-amber-200 text-xs">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-download"></i><span id="backup-banner-text"></span></span>
+            <span class="flex items-center gap-2">
+                <button type="button" onclick="exportJSON()" class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-semibold">Fazer backup agora</button>
+                <button type="button" onclick="snoozeBackup()" class="px-3 py-1.5 rounded-lg bg-white/70 dark:bg-slate-800 font-semibold">Lembrar em 3 dias</button>
+            </span>
+        </div>
+
+        <!-- Faixa de Contexto do Perfil Ativo -->
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-800 px-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <div class="flex items-center gap-3">
+                <div id="active-profile-avatar" class="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">V</div>
+                <div>
+                    <h2 id="banner-profile-name" class="font-bold text-sm text-slate-900 dark:text-white">Perfil Ativo</h2>
+                    <p id="banner-profile-meta" class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Altura não informada • Adicione no menu Metas & Perfil para calcular IMC e RCE</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <button type="button" onclick="editCurrentProfileGoals()" class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-sliders"></i> Configurar Metas
+                </button>
+                <button type="button" onclick="openProfilesModal(true)" class="text-xs font-semibold text-teal-600 dark:text-teal-400 hover:underline flex items-center gap-1">
+                    <i class="fa-solid fa-user-plus"></i> + Familiar
+                </button>
+            </div>
+        </div>
+
+        <!-- 1. PAINEL DE RESUMO (KPIs) -->
+        <section aria-label="Resumo de Indicadores">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- KPI 1: Peso, IMC & Meta -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Último Peso & IMC</span>
+                        <div class="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                            <i class="fa-solid fa-weight-scale"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-baseline justify-between gap-2">
+                        <div>
+                            <span id="kpi-weight" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">--</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400">kg</span>
+                        </div>
+                        <span id="kpi-bmi-badge" class="hidden text-[11px] font-semibold px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200">
+                            IMC --
+                        </span>
+                    </div>
+                    <div id="kpi-weight-diff" class="mt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        Sem registro anterior
+                    </div>
+                    <!-- Barra de Progresso Meta de Peso -->
+                    <div id="kpi-weight-goal-box" class="hidden mt-3 pt-2.5 border-t border-slate-100 dark:border-slate-700/80">
+                        <div class="flex justify-between text-[11px] font-medium mb-1">
+                            <span id="kpi-weight-goal-text" class="text-slate-600 dark:text-slate-300">Meta: -- kg</span>
+                            <span id="kpi-weight-goal-pct" class="text-teal-600 dark:text-teal-400 font-bold">0%</span>
+                        </div>
+                        <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                            <div id="kpi-weight-goal-bar" class="h-full bg-teal-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI 2: Pressão Arterial -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pressão Arterial</span>
+                        <div class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 flex items-center justify-center">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-baseline justify-between">
+                        <div>
+                            <span id="kpi-bp" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">--/--</span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400">mmHg</span>
+                        </div>
+                        <span id="kpi-bpm" class="text-xs font-semibold px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                            -- BPM
+                        </span>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <span id="kpi-bp-status" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400">
+                            Aguardando dados
+                        </span>
+                    </div>
+                </div>
+
+                <!-- KPI 3: Média Calorias e Água (7 dias) + Metas -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Média diária (7d)</span>
+                        <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 grid grid-cols-2 gap-3">
+                        <div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Água</p>
+                            <p class="text-lg sm:text-xl font-bold text-sky-600 dark:text-sky-400"><span id="kpi-water">--</span> <span class="text-xs font-normal text-slate-500">L/dia</span></p>
+                            <p id="kpi-water-today" class="text-[11px] text-slate-500 dark:text-slate-400">Hoje: -- L</p>
+                            <div class="flex gap-1 mt-1.5">
+                                <button type="button" onclick="addWater(250)" class="px-2 py-1 rounded-lg text-[11px] font-semibold bg-sky-50 hover:bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">+250 ml</button>
+                                <button type="button" onclick="addWater(500)" class="px-2 py-1 rounded-lg text-[11px] font-semibold bg-sky-50 hover:bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300">+500 ml</button>
+                            </div>
+                            <div id="kpi-water-goal-box" class="hidden mt-1.5">
+                                <div class="flex justify-between text-[10px] text-slate-500 mb-0.5">
+                                    <span id="kpi-water-goal-label">Meta: --L</span>
+                                    <span id="kpi-water-goal-pct" class="font-bold text-sky-600 dark:text-sky-400">0%</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div id="kpi-water-goal-bar" class="h-full bg-sky-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Calorias</p>
+                            <p class="text-lg sm:text-xl font-bold text-amber-600 dark:text-amber-400"><span id="kpi-calories">--</span> <span class="text-xs font-normal text-slate-500">kcal/dia</span></p>
+                            <p id="kpi-cal-today" class="text-[11px] text-slate-500 dark:text-slate-400">Hoje: -- kcal</p>
+                            <div id="kpi-cal-goal-box" class="hidden mt-1.5">
+                                <div class="flex justify-between text-[10px] text-slate-500 mb-0.5">
+                                    <span id="kpi-cal-goal-label">Meta: --</span>
+                                    <span id="kpi-cal-goal-pct" class="font-bold text-amber-600 dark:text-amber-400">0%</span>
+                                </div>
+                                <div class="w-full h-1.5 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+                                    <div id="kpi-cal-goal-bar" class="h-full bg-amber-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI 4: Cintura & RCE -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Cintura & RCE</span>
+                        <div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center">
+                            <i class="fa-solid fa-ruler-horizontal"></i>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex items-baseline justify-between gap-2">
+                        <div>
+                            <span id="kpi-waist" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">--</span>
+                            <span class="text-sm text-slate-500 dark:text-slate-400">cm</span>
+                        </div>
+                        <span id="kpi-whtr-badge" class="hidden text-[11px] font-semibold px-2 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200">
+                            RCE --
+                        </span>
+                    </div>
+                    <div id="kpi-waist-diff" class="mt-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+                        Sem registro anterior
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GRID PRINCIPAL: FORMULÁRIO À ESQUERDA E GRÁFICOS À DIREITA -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- 2. FORMULÁRIO DE REGISTRO -->
+            <section class="lg:col-span-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-circle-plus text-teal-600 dark:text-teal-400"></i>
+                        <h2 id="form-title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Novo Registro</h2>
+                    </div>
+                    <button type="button" id="cancel-edit-btn" onclick="resetForm()" class="hidden text-xs font-medium text-rose-600 hover:underline">
+                        Cancelar Edição
+                    </button>
+                </div>
+
+                <form id="health-form" class="p-5 space-y-5">
+                    <input type="hidden" id="entry-id">
+
+                    <div>
+                        <label for="entry-datetime" class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5">
+                            Data e Hora do Registro *
+                        </label>
+                        <div class="flex gap-2">
+                            <input type="datetime-local" id="entry-datetime" required
+                                class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3.5 py-2.5 text-sm text-slate-900 dark:text-white focus:border-teal-500 outline-none">
+                            <button type="button" onclick="setCurrentDateTime()" title="Definir para Agora"
+                                class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 text-xs font-medium transition shrink-0">
+                                Agora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Navegação por Abas do Formulário -->
+                    <div class="border-b border-slate-200 dark:border-slate-700 flex text-xs sm:text-sm">
+                        <button type="button" onclick="switchFormTab('vitals')" id="tab-btn-vitals" class="tab-active flex-1 py-2.5 text-center transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-heart-pulse"></i> Sinais Vitais
+                        </button>
+                        <button type="button" onclick="switchFormTab('body')" id="tab-btn-body" class="flex-1 py-2.5 text-center text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-child-reaching"></i> Corpo
+                        </button>
+                        <button type="button" onclick="switchFormTab('habits')" id="tab-btn-habits" class="flex-1 py-2.5 text-center text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-leaf"></i> Hábitos
+                        </button>
+                    </div>
+
+                    <!-- ABA 1: Sinais Vitais -->
+                    <div id="tab-content-vitals" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="systolic" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Sistólica (Máx)</label>
+                                <div class="relative">
+                                    <input type="number" id="systolic" placeholder="Ex: 120" min="50" max="260"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">mmHg</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="diastolic" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Diastólica (Mín)</label>
+                                <div class="relative">
+                                    <input type="number" id="diastolic" placeholder="Ex: 80" min="30" max="160"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">mmHg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="bpm" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Freq. Cardíaca</label>
+                                <div class="relative">
+                                    <input type="number" id="bpm" placeholder="Ex: 72" min="30" max="220"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">BPM</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="glucose" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Glicemia</label>
+                                <div class="relative">
+                                    <input type="number" id="glucose" placeholder="Ex: 95" min="20" max="600"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">mg/dL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA 2: Corpo e Medidas -->
+                    <div id="tab-content-body" class="space-y-4 hidden">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="weight" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Peso Atual</label>
+                                <div class="relative">
+                                    <input type="number" step="0.1" id="weight" placeholder="Ex: 75.5" min="2" max="350"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">kg</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="bodyfat" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">% Gordura</label>
+                                <div class="relative">
+                                    <input type="number" step="0.1" id="bodyfat" placeholder="Ex: 18.5" min="2" max="70"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="waist" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Cintura</label>
+                                <div class="relative">
+                                    <input type="number" step="0.5" id="waist" placeholder="Ex: 84" min="20" max="250"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">cm</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="abdomen" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Abdômen</label>
+                                <div class="relative">
+                                    <input type="number" step="0.5" id="abdomen" placeholder="Ex: 88" min="20" max="250"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ABA 3: Hábitos e Rotina -->
+                    <div id="tab-content-habits" class="space-y-4 hidden">
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="water" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Água desta vez (soma do dia)</label>
+                                <div class="relative">
+                                    <input type="number" step="0.05" id="water" placeholder="Ex: 2.5" min="0" max="15"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">Litros</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="calories" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Calorias desta vez (soma do dia)</label>
+                                <div class="relative">
+                                    <input type="number" id="calories" placeholder="Ex: 2100" min="0" max="15000"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">kcal</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label for="sleep-hours" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Horas de Sono</label>
+                                <div class="relative">
+                                    <input type="number" step="0.5" id="sleep-hours" placeholder="Ex: 7.5" min="0" max="24"
+                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <span class="absolute right-3 top-2 text-xs text-slate-400">hrs</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="sleep-quality" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Qualidade do Sono</label>
+                                <select id="sleep-quality" class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                                    <option value="">Não informado</option>
+                                    <option value="Ruim">Ruim</option>
+                                    <option value="Regular">Regular</option>
+                                    <option value="Boa">Boa</option>
+                                    <option value="Excelente">Excelente</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="activity" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Atividade Física</label>
+                            <input type="text" id="activity" placeholder="Ex: Musculação, Corrida, Caminhada..."
+                                class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="notes" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Observações (Opcional)</label>
+                        <textarea id="notes" rows="2" placeholder="Ex: Jejum, dor de cabeça leve..."
+                            class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm focus:border-teal-500 outline-none resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-full py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 active:scale-[0.99] text-white font-semibold text-sm shadow-md shadow-teal-600/20 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        <span>Salvar Registro</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- 3. GRÁFICOS INTERATIVOS -->
+            <section class="lg:col-span-7 space-y-6">
+                
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-teal-600 dark:text-teal-400"></i>
+                        <h2 class="font-bold text-base text-slate-900 dark:text-white">Evolução e Análises</h2>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-700 p-1 rounded-xl">
+                        <button type="button" onclick="setChartLimit(7)" id="filter-7" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-600 text-teal-700 dark:text-teal-300 shadow-sm transition">
+                            7 Dias
+                        </button>
+                        <button type="button" onclick="setChartLimit(30)" id="filter-30" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+                            30 Dias
+                        </button>
+                        <button type="button" onclick="setChartLimit(0)" id="filter-0" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 transition">
+                            Todos
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="font-semibold text-sm text-slate-900 dark:text-white mb-3">Semana atual vs. semana anterior</h3>
+                    <div id="week-compare" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></div>
+                </div>
+
+                <!-- Gráfico 1: Peso & Cintura -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="font-semibold text-sm text-slate-900 dark:text-white mb-1">Composição Corporal: Peso, Média Móvel, Cintura &amp; Gordura (%)</h3>
+                    <div class="relative h-60 w-full mt-3">
+                        <canvas id="bodyChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico 2: Pressão Arterial & BPM -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="font-semibold text-sm text-slate-900 dark:text-white mb-1">Sinais Vitais: Pressão Arterial &amp; Frequência Cardíaca</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Linhas tracejadas: verde = 120/80 (ótima), âmbar = 140/90 (limite).</p>
+                    <div class="relative h-60 w-full mt-3">
+                        <canvas id="vitalsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico: Glicemia -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="font-semibold text-sm text-slate-900 dark:text-white mb-1">Glicemia (mg/dL)</h3>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Faixa verde: 70–99 mg/dL (referência em jejum).</p>
+                    <div class="relative h-52 w-full mt-3">
+                        <canvas id="glucoseChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Gráfico 3: Hábitos (Água, Sono & Calorias) -->
+                <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="font-semibold text-sm text-slate-900 dark:text-white mb-1">Hábitos Diários (totais por dia): Água, Sono &amp; Calorias</h3>
+                    <div class="relative h-56 w-full mt-3">
+                        <canvas id="habitsChart"></canvas>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- 4. HISTÓRICO E GERENCIAMENTO DE DADOS -->
+        <section class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+            <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div>
+                    <h2 class="font-bold text-base text-slate-900 dark:text-white flex flex-wrap items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-teal-600 dark:text-teal-400"></i>
+                        <span>Histórico — <span id="history-profile-name" class="text-teal-600 dark:text-teal-400">Meu Perfil</span></span>
+                        <span id="total-records-badge" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">0</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2">
+                    <button onclick="exportCSV()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-file-csv"></i> CSV
+                    </button>
+                    <button onclick="exportJSON()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-sky-50 hover:bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-download"></i> Backup JSON
+                    </button>
+                    <label class="cursor-pointer px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-upload"></i> Restaurar
+                        <input type="file" id="import-json-input" accept=".json" class="hidden" onchange="importJSON(event)">
+                    </label>
+                    <button onclick="requestClearProfileRecords()" class="px-3 py-2 rounded-xl text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-trash-can"></i> Limpar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filtros da Tabela -->
+            <div class="px-5 py-3 bg-slate-50/70 dark:bg-slate-800/40 border-b border-slate-200 dark:border-slate-700 flex flex-col md:flex-row gap-3 justify-between">
+                <div class="relative flex-grow max-w-md">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-slate-400"></i>
+                    <input type="text" id="history-search" oninput="renderTable()" placeholder="Buscar por atividade ou observação..."
+                        class="w-full pl-8 pr-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-xs focus:border-teal-500 outline-none">
+                </div>
+                <div class="flex items-center gap-2">
+                    <select id="history-month-filter" onchange="renderTable()" aria-label="Filtrar por Mês" class="rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-1.5 text-xs outline-none">
+                        <option value="all">Todos os meses</option>
+                    </select>
+                    <select id="history-category-filter" onchange="renderTable()" aria-label="Filtrar por Categoria" class="rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-1.5 text-xs outline-none">
+                        <option value="all">Todas as categorias</option>
+                        <option value="vitals">Com Pressão / Vitais</option>
+                        <option value="body">Com Medidas Corporais</option>
+                        <option value="habits">Com Hábitos / Dieta</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                            <th class="py-3 px-4">Data / Hora</th>
+                            <th class="py-3 px-4">Pressão / BPM</th>
+                            <th class="py-3 px-4">Peso / Gordura</th>
+                            <th class="py-3 px-4">Medidas</th>
+                            <th class="py-3 px-4">Hábitos</th>
+                            <th class="py-3 px-4">Atividade</th>
+                            <th class="py-3 px-4">Obs.</th>
+                            <th class="py-3 px-4 text-right">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-table-body" class="divide-y divide-slate-200 dark:divide-slate-700 text-sm">
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="empty-state" class="hidden py-12 px-4 text-center">
+                <div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-700/50 text-slate-400 flex items-center justify-center mx-auto mb-3 text-2xl">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+                <h3 class="text-base font-semibold text-slate-900 dark:text-white">Nenhum registro encontrado</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto mt-1">
+                    Preencha o formulário acima para iniciar o acompanhamento.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="no-print border-t border-slate-200 dark:border-slate-800 py-5 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p>VitalTrack • Seus dados são salvos exclusivamente no seu dispositivo (localStorage). Funciona offline.</p>
+        <p id="storage-status" class="mt-1"></p>
+    </footer>
+
+    <!-- JAVASCRIPT PRINCIPAL ROBUSTO -->
+    <script>
+        const STORAGE_KEY = 'vitaltrack_health_records_v1';
+        const PROFILES_KEY = 'vitaltrack_profiles_v1';
+        const ACTIVE_PROFILE_KEY = 'vitaltrack_active_profile_v1';
+        const THEME_KEY = 'vitaltrack_theme';
+        
+        let profiles = [];
+        let activeProfileId = null;
+        let allRecords = [];
+        let chartLimit = 7;
+        let deferredPwaPrompt = null;
+                let pendingModalAction = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            initPWA();
+            setCurrentDateTime();
+            loadProfilesAndRecords();
+            setupFormListener();
+            setupProfileFormListener();
+            setupModalListeners();
+            renderAll();
+            renderBackupBanner();
+            initStorage();
+            window.addEventListener('resize', () => { clearTimeout(window.__rz); window.__rz = setTimeout(renderCharts, 150); });
+        });
+
+        function loadProfilesAndRecords() {
+            try {
+                const rawProfiles = localStorage.getItem(PROFILES_KEY);
+                profiles = rawProfiles ? JSON.parse(rawProfiles) : [];
+            } catch (e) {
+                profiles = [];
+            }
+
+            if (!Array.isArray(profiles) || profiles.length === 0) {
+                profiles = [{
+                    id: 'profile_default',
+                    name: 'Meu Perfil',
+                    relation: 'Titular',
+                    height: null,
+                    targetWeight: null,
+                    targetWaist: null,
+                    targetCalories: null,
+                    targetWater: null,
+                    birthdate: null,
+                    color: '#0d9488'
+                }];
+                saveProfiles();
+            }
+
+            const savedActiveId = localStorage.getItem(ACTIVE_PROFILE_KEY);
+            if (savedActiveId && profiles.some(p => p.id === savedActiveId)) {
+                activeProfileId = savedActiveId;
+            } else {
+                activeProfileId = profiles[0].id;
+                localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
+            }
+
+            try {
+                const rawRecords = localStorage.getItem(STORAGE_KEY);
+                allRecords = rawRecords ? JSON.parse(rawRecords) : [];
+                if (!Array.isArray(allRecords)) allRecords = [];
+                allRecords = allRecords.map(r => normalizeRecord(r, profiles[0].id)).filter(Boolean);
+                saveRecords();
+            } catch (e) {
+                allRecords = [];
+            }
+        }
+
+
+        function esc(v) {
+            return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        const NUM_FIELDS = ['systolic','diastolic','bpm','glucose','weight','bodyfat','waist','abdomen','water','calories','sleepHours'];
+        function normalizeRecord(r, fallbackProfileId) {
+            if (!r || typeof r !== 'object' || !r.datetime) return null;
+            const n = { ...r };
+            n.id = String(n.id || (crypto.randomUUID ? crypto.randomUUID() : Date.now() + Math.random().toString(36).slice(2)));
+            n.profileId = n.profileId || fallbackProfileId;
+            NUM_FIELDS.forEach(k => {
+                const v = parseFloat(n[k]);
+                n[k] = (n[k] === null || n[k] === undefined || n[k] === '' || isNaN(v)) ? null : v;
+            });
+            ['sleepQuality','activity','notes'].forEach(k => { if (n[k] === undefined || n[k] === '') n[k] = null; });
+            return n;
+        }
+
+        function saveProfiles() {
+            localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
+        }
+
+        function saveRecords() {
+            sortRecords();
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(allRecords));
+            } catch (e) {
+                showToast('Não foi possível salvar (armazenamento cheio ou bloqueado). Faça um backup!', 'error');
+            }
+            renderBackupBanner();
+        }
+
+        const BACKUP_KEY = 'vitaltrack_last_backup_v1';
+        const SNOOZE_KEY = 'vitaltrack_backup_snooze_v1';
+        const BACKUP_DAYS = 7;
+        let storagePersisted = false;
+
+        function readNum(key) { try { return parseInt(localStorage.getItem(key), 10) || 0; } catch (e) { return 0; } }
+        function markBackup() { try { localStorage.setItem(BACKUP_KEY, String(Date.now())); localStorage.removeItem(SNOOZE_KEY); } catch (e) {} renderBackupBanner(); renderStorageStatus(); }
+        function snoozeBackup() { try { localStorage.setItem(SNOOZE_KEY, String(Date.now() + 3 * 864e5)); } catch (e) {} renderBackupBanner(); }
+        function daysSinceBackup() { const l = readNum(BACKUP_KEY); return l ? Math.floor((Date.now() - l) / 864e5) : null; }
+
+        function renderBackupBanner() {
+            const el = document.getElementById('backup-banner');
+            if (!el) return;
+            const d = daysSinceBackup();
+            const due = allRecords.length > 0 && (d === null || d >= BACKUP_DAYS) && Date.now() > readNum(SNOOZE_KEY);
+            document.getElementById('backup-banner-text').textContent = d === null
+                ? 'Você ainda não fez backup dos seus dados. Se o navegador limpar o armazenamento, eles se perdem.'
+                : `Seu último backup foi há ${d} dia(s).`;
+            el.classList.toggle('hidden', !due);
+            el.classList.toggle('flex', due);
+        }
+
+        function renderStorageStatus() {
+            const el = document.getElementById('storage-status');
+            if (!el) return;
+            const d = daysSinceBackup();
+            const bk = d === null ? 'nenhum backup feito' : (d === 0 ? 'último backup: hoje' : `último backup: há ${d} dia(s)`);
+            el.textContent = (storagePersisted ? 'Armazenamento protegido pelo navegador' : 'Armazenamento comum do navegador (pode ser limpo)') + ' • ' + bk;
+        }
+
+        async function initStorage() {
+            try {
+                if (navigator.storage && navigator.storage.persist) {
+                    storagePersisted = (await navigator.storage.persisted()) || (await navigator.storage.persist());
+                }
+            } catch (e) { storagePersisted = false; }
+            renderStorageStatus();
+        }
+
+        function sortRecords() {
+            allRecords.sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
+        }
+
+        function getActiveProfile() {
+            return profiles.find(p => p.id === activeProfileId) || profiles[0];
+        }
+
+        function getProfileRecords() {
+            return allRecords.filter(r => r.profileId === activeProfileId);
+        }
+
+        function switchActiveProfile(newId) {
+            if (!profiles.some(p => p.id === newId)) return;
+            activeProfileId = newId;
+            localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
+            resetForm();
+            renderAll();
+        }
+
+        function renderProfileUI() {
+            const activeProf = getActiveProfile();
+            const selector = document.getElementById('profile-selector');
+            selector.innerHTML = '';
+
+            profiles.forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = p.id;
+                opt.textContent = p.relation ? `${p.name} (${p.relation})` : p.name;
+                if (p.id === activeProfileId) opt.selected = true;
+                selector.appendChild(opt);
+            });
+
+            const initial = (activeProf.name || 'P').charAt(0).toUpperCase();
+            document.getElementById('active-profile-avatar').textContent = initial;
+            document.getElementById('active-profile-avatar').style.backgroundColor = activeProf.color || '#0d9488';
+            document.getElementById('banner-profile-name').textContent = activeProf.name;
+
+            const metaParts = [];
+            if (activeProf.birthdate) {
+                const age = calculateAge(activeProf.birthdate);
+                if (age !== null) metaParts.push(`${age} anos`);
+            }
+            if (activeProf.height) metaParts.push(`Altura: ${activeProf.height} cm`);
+            if (activeProf.targetWeight) metaParts.push(`Meta Peso: ${activeProf.targetWeight} kg`);
+            if (activeProf.targetWater) metaParts.push(`Meta Água: ${activeProf.targetWater} L`);
+
+            document.getElementById('banner-profile-meta').textContent = metaParts.length > 0 
+                ? metaParts.join(' • ') 
+                : 'Configure sua altura e metas em "Metas & Perfil" para cálculos automáticos de IMC e RCE';
+
+            document.getElementById('history-profile-name').textContent = activeProf.name;
+        }
+
+        function calculateAge(birthdateStr) {
+            const birth = new Date(birthdateStr);
+            if (isNaN(birth)) return null;
+            const today = new Date();
+            let age = today.getFullYear() - birth.getFullYear();
+            const m = today.getMonth() - birth.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+            return age >= 0 ? age : null;
+        }
+
+        function openProfilesModal(focusNew = false) {
+            resetProfileForm();
+            renderProfilesListInModal();
+            const modal = document.getElementById('profiles-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            if (focusNew) setTimeout(() => document.getElementById('prof-name').focus(), 100);
+        }
+
+        function closeProfilesModal() {
+            const modal = document.getElementById('profiles-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function renderProfilesListInModal() {
+            const container = document.getElementById('profiles-list');
+            container.innerHTML = '';
+
+            profiles.forEach(p => {
+                const count = allRecords.filter(r => r.profileId === p.id).length;
+                const isCurrent = p.id === activeProfileId;
+                const initial = (p.name || 'P').charAt(0).toUpperCase();
+
+                const item = document.createElement('div');
+                item.className = `p-3 rounded-xl border transition flex items-center justify-between gap-2 ${
+                    isCurrent ? 'border-teal-500 bg-teal-50/50 dark:bg-teal-900/20' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+                }`;
+
+                item.innerHTML = `
+                    <div class="flex items-center gap-2.5 min-w-0 cursor-pointer flex-grow" onclick="switchActiveProfile('${p.id}'); closeProfilesModal();">
+                        <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0" style="background-color: ${p.color || '#0d9488'};">
+                            ${initial}
+                        </div>
+                        <div class="min-w-0">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-bold text-sm text-slate-900 dark:text-white truncate">${p.name}</span>
+                                ${isCurrent ? '<span class="text-[10px] font-bold px-1.5 py-0.2 rounded bg-teal-600 text-white">Ativo</span>' : ''}
+                            </div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 truncate">
+                                ${p.relation ? p.relation + ' • ' : ''}${count} registro(s)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 shrink-0">
+                        <button type="button" onclick="editProfile('${p.id}')" title="Editar" class="p-1.5 rounded-lg text-slate-500 hover:text-teal-600">
+                            <i class="fa-solid fa-pen text-xs"></i>
+                        </button>
+                        ${profiles.length > 1 ? `
+                        <button type="button" onclick="requestDeleteProfile('${p.id}')" title="Excluir" class="p-1.5 rounded-lg text-slate-500 hover:text-rose-600">
+                            <i class="fa-solid fa-trash text-xs"></i>
+                        </button>` : ''}
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function setupProfileFormListener() {
+            document.getElementById('profile-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = document.getElementById('prof-id').value;
+                const name = document.getElementById('prof-name').value.trim();
+                if (!name) return;
+
+                const relation = document.getElementById('prof-relation').value.trim() || null;
+                const heightVal = document.getElementById('prof-height').value;
+                const height = heightVal ? parseFloat(heightVal) : null;
+                const targetWeight = getNumVal('prof-target-weight');
+                const targetWaist = getNumVal('prof-target-waist');
+                const targetCalories = getNumVal('prof-target-calories');
+                const targetWater = getNumVal('prof-target-water');
+                const birthdate = document.getElementById('prof-birthdate').value || null;
+                const colorInput = document.querySelector('input[name="prof-color"]:checked');
+                const color = colorInput ? colorInput.value : '#0d9488';
+
+                if (id) {
+                    const idx = profiles.findIndex(p => p.id === id);
+                    if (idx !== -1) {
+                        profiles[idx] = { ...profiles[idx], name, relation, height, targetWeight, targetWaist, targetCalories, targetWater, birthdate, color };
+                        showToast(`Perfil atualizado!`);
+                    }
+                } else {
+                    const newProf = { id: `prof_${Date.now()}`, name, relation, height, targetWeight, targetWaist, targetCalories, targetWater, birthdate, color };
+                    profiles.push(newProf);
+                    activeProfileId = newProf.id;
+                    localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
+                    showToast(`Perfil criado e selecionado!`);
+                }
+
+                saveProfiles();
+                resetProfileForm();
+                renderProfilesListInModal();
+                renderAll();
+            });
+        }
+
+        function editProfile(id) {
+            const prof = profiles.find(p => p.id === id);
+            if (!prof) return;
+
+            document.getElementById('prof-id').value = prof.id;
+            document.getElementById('prof-name').value = prof.name;
+            document.getElementById('prof-relation').value = prof.relation || '';
+            document.getElementById('prof-height').value = prof.height || '';
+            document.getElementById('prof-target-weight').value = prof.targetWeight || '';
+            document.getElementById('prof-target-waist').value = prof.targetWaist || '';
+            document.getElementById('prof-target-calories').value = prof.targetCalories || '';
+            document.getElementById('prof-target-water').value = prof.targetWater || '';
+            document.getElementById('prof-birthdate').value = prof.birthdate || '';
+
+            const colorRadio = document.querySelector(`input[name="prof-color"][value="${prof.color}"]`);
+            if (colorRadio) colorRadio.checked = true;
+
+            document.getElementById('profile-form-title').textContent = `Editando: ${prof.name}`;
+            document.getElementById('save-profile-btn').innerHTML = '<i class="fa-solid fa-check"></i> <span>Atualizar Perfil</span>';
+            document.getElementById('cancel-profile-edit').classList.remove('hidden');
+        }
+
+        function resetProfileForm() {
+            document.getElementById('profile-form').reset();
+            document.getElementById('prof-id').value = '';
+            document.getElementById('profile-form-title').textContent = 'Adicionar Novo Membro';
+            document.getElementById('save-profile-btn').innerHTML = '<i class="fa-solid fa-user-plus"></i> <span>Salvar Perfil</span>';
+            document.getElementById('cancel-profile-edit').classList.add('hidden');
+        }
+
+        function editCurrentProfileGoals() {
+            openProfilesModal();
+            editProfile(activeProfileId);
+        }
+
+        function requestDeleteProfile(id) {
+            if (profiles.length <= 1) {
+                showToast('Você precisa manter pelo menos um perfil.', 'error');
+                return;
+            }
+            const prof = profiles.find(p => p.id === id);
+            openConfirmModal(
+                `Excluir Perfil`,
+                `Tem certeza que deseja excluir o perfil de ${prof.name} e todos os seus registros?`,
+                () => {
+                    profiles = profiles.filter(p => p.id !== id);
+                    allRecords = allRecords.filter(r => r.profileId !== id);
+                    saveProfiles();
+                    saveRecords();
+                    if (activeProfileId === id) {
+                        activeProfileId = profiles[0].id;
+                        localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
+                    }
+                    renderProfilesListInModal();
+                    renderAll();
+                    showToast('Perfil excluído.', 'info');
+                }
+            );
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem(THEME_KEY);
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+            }
+            updateThemeIcon(isDark);
+
+            const toggleBtn = document.getElementById('theme-toggle');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    const currentlyDark = document.documentElement.classList.contains('dark');
+                    const nextDark = !currentlyDark;
+                    if (nextDark) {
+                        document.documentElement.classList.add('dark');
+                        document.documentElement.classList.remove('light');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        document.documentElement.classList.add('light');
+                    }
+                    localStorage.setItem(THEME_KEY, nextDark ? 'dark' : 'light');
+                    updateThemeIcon(nextDark);
+                    renderCharts();
+                });
+            }
+        }
+
+        function updateThemeIcon(isDark) {
+            const icon = document.getElementById('theme-icon');
+            if (icon) icon.className = isDark ? 'fa-solid fa-sun text-amber-400' : 'fa-solid fa-moon text-slate-600';
+        }
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const toast = document.createElement('div');
+            const colors = { success: 'bg-teal-600 text-white', error: 'bg-rose-600 text-white', info: 'bg-slate-800 text-white' };
+            toast.className = `${colors[type] || colors.info} px-4 py-3 rounded-xl shadow-lg flex items-center gap-2.5 text-sm font-medium transform transition-all duration-300 translate-y-2 opacity-0 pointer-events-auto`;
+            toast.innerHTML = `<i class="fa-solid fa-circle-check"></i><span>${message}</span>`;
+            container.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.remove('translate-y-2', 'opacity-0'));
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        function openConfirmModal(title, message, callback) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            pendingModalAction = callback;
+            const modal = document.getElementById('confirm-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeConfirmModal() {
+            const modal = document.getElementById('confirm-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            pendingModalAction = null;
+        }
+
+        function setupModalListeners() {
+            document.getElementById('modal-cancel').addEventListener('click', closeConfirmModal);
+            document.getElementById('modal-confirm').addEventListener('click', () => {
+                if (typeof pendingModalAction === 'function') pendingModalAction();
+                closeConfirmModal();
+            });
+        }
+
+        function setCurrentDateTime() {
+            const now = new Date();
+            const offset = now.getTimezoneOffset() * 60000;
+            const localISOTime = (new Date(now - offset)).toISOString().slice(0, 16);
+            const el = document.getElementById('entry-datetime');
+            if (el) el.value = localISOTime;
+        }
+
+        function switchFormTab(tabName) {
+            ['vitals', 'body', 'habits'].forEach(t => {
+                const btn = document.getElementById(`tab-btn-${t}`);
+                const content = document.getElementById(`tab-content-${t}`);
+                if (t === tabName) {
+                    btn.classList.add('tab-active');
+                    btn.classList.remove('text-slate-500', 'dark:text-slate-400');
+                    content.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('tab-active');
+                    btn.classList.add('text-slate-500', 'dark:text-slate-400');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+
+        function getNumVal(id) {
+            const val = document.getElementById(id).value;
+            return val !== '' && !isNaN(val) ? parseFloat(val) : null;
+        }
+
+        function setupFormListener() {
+            document.getElementById('health-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const datetime = document.getElementById('entry-datetime').value;
+                if (!datetime) return;
+
+                const entryId = document.getElementById('entry-id').value;
+                const entryData = {
+                    id: entryId || (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString()),
+                    profileId: activeProfileId,
+                    datetime: datetime,
+                    systolic: getNumVal('systolic'),
+                    diastolic: getNumVal('diastolic'),
+                    bpm: getNumVal('bpm'),
+                    glucose: getNumVal('glucose'),
+                    weight: getNumVal('weight'),
+                    bodyfat: getNumVal('bodyfat'),
+                    waist: getNumVal('waist'),
+                    abdomen: getNumVal('abdomen'),
+                    water: getNumVal('water'),
+                    calories: getNumVal('calories'),
+                    sleepHours: getNumVal('sleep-hours'),
+                    sleepQuality: document.getElementById('sleep-quality').value || null,
+                    activity: document.getElementById('activity').value.trim() || null,
+                    notes: document.getElementById('notes').value.trim() || null
+                };
+
+                const hasData = NUM_FIELDS.some(k => entryData[k] !== null) || entryData.sleepQuality || entryData.activity || entryData.notes;
+                if (!hasData) {
+                    showToast('Preencha ao menos um campo além da data.', 'error');
+                    return;
+                }
+
+                if (entryId) {
+                    const idx = allRecords.findIndex(r => r.id === entryId);
+                    if (idx !== -1) {
+                        allRecords[idx] = entryData;
+                        showToast('Registro atualizado com sucesso!');
+                    }
+                } else {
+                    allRecords.push(entryData);
+                    showToast('Registro salvo com sucesso!');
+                }
+
+                saveRecords();
+                resetForm();
+                renderAll();
+            });
+        }
+
+        function resetForm() {
+            document.getElementById('health-form').reset();
+            document.getElementById('entry-id').value = '';
+            document.getElementById('form-title').textContent = `Novo Registro — ${getActiveProfile().name}`;
+            document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-floppy-disk"></i><span>Salvar Registro</span>';
+            document.getElementById('cancel-edit-btn').classList.add('hidden');
+            setCurrentDateTime();
+        }
+
+        function editRecord(id) {
+            const rec = allRecords.find(r => r.id === id);
+            if (!rec) return;
+
+            document.getElementById('entry-id').value = rec.id;
+            document.getElementById('entry-datetime').value = rec.datetime;
+            document.getElementById('systolic').value = rec.systolic ?? '';
+            document.getElementById('diastolic').value = rec.diastolic ?? '';
+            document.getElementById('bpm').value = rec.bpm ?? '';
+            document.getElementById('glucose').value = rec.glucose ?? '';
+            document.getElementById('weight').value = rec.weight ?? '';
+            document.getElementById('bodyfat').value = rec.bodyfat ?? '';
+            document.getElementById('waist').value = rec.waist ?? '';
+            document.getElementById('abdomen').value = rec.abdomen ?? '';
+            document.getElementById('water').value = rec.water ?? '';
+            document.getElementById('calories').value = rec.calories ?? '';
+            document.getElementById('sleep-hours').value = rec.sleepHours ?? '';
+            document.getElementById('sleep-quality').value = rec.sleepQuality ?? '';
+            document.getElementById('activity').value = rec.activity ?? '';
+            document.getElementById('notes').value = rec.notes ?? '';
+
+            document.getElementById('form-title').textContent = `Editando Registro — ${getActiveProfile().name}`;
+            document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i><span>Atualizar Registro</span>';
+            document.getElementById('cancel-edit-btn').classList.remove('hidden');
+            document.getElementById('health-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function requestDeleteRecord(id) {
+            openConfirmModal('Excluir Registro', 'Deseja realmente excluir este registro?', () => {
+                allRecords = allRecords.filter(r => r.id !== id);
+                saveRecords();
+                renderAll();
+                showToast('Registro excluído.', 'info');
+            });
+        }
+
+
+        function pad2(n) { return String(n).padStart(2, '0'); }
+        function dayKey(iso) { return String(iso).slice(0, 10); }
+        function dateKey(d) { return `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`; }
+        function todayKey() { return dateKey(new Date()); }
+        function lastNDaysKeys(n, offset = 0) {
+            const out = [];
+            for (let i = n - 1 + offset; i >= offset; i--) { const d = new Date(); d.setDate(d.getDate() - i); out.push(dateKey(d)); }
+            return out;
+        }
+        function dailyTotals(records, field) {
+            const m = new Map();
+            records.forEach(r => { if (r[field] !== null && r[field] !== undefined) { const k = dayKey(r.datetime); m.set(k, (m.get(k) || 0) + r[field]); } });
+            return m;
+        }
+        function fmtNum(v, d = 1) { return v === null || v === undefined || isNaN(v) ? '--' : Number(v).toFixed(d).replace('.', ','); }
+        function avgDaily(m, keys) {
+            let sel = keys ? keys.filter(k => m.has(k)) : [];
+            if (!sel.length && !keys) sel = [...m.keys()].sort().slice(-7);
+            return sel.length ? sel.reduce((a, k) => a + m.get(k), 0) / sel.length : null;
+        }
+
+        function addWater(ml) {
+            const tk = todayKey();
+            const onlyWater = r => r.profileId === activeProfileId && dayKey(r.datetime) === tk && r.water !== null &&
+                NUM_FIELDS.filter(k => k !== 'water').every(k => r[k] === null) && !r.sleepQuality && !r.activity && !r.notes;
+            const add = ml / 1000;
+            const rec = allRecords.find(onlyWater);
+            if (rec) rec.water = Math.round((rec.water + add) * 1000) / 1000;
+            else {
+                const now = new Date();
+                const iso = `${dateKey(now)}T${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
+                allRecords.push(normalizeRecord({ datetime: iso, water: add, profileId: activeProfileId }, activeProfileId));
+            }
+            saveRecords();
+            renderAll();
+            showToast(`+${ml} ml de água registrados`);
+        }
+
+        function renderKPIs() {
+            const records = getProfileRecords();
+            const activeProf = getActiveProfile();
+
+            const weightRecords = records.filter(r => r.weight !== null);
+            const kpiWeightEl = document.getElementById('kpi-weight');
+            const kpiBmiBadge = document.getElementById('kpi-bmi-badge');
+            const kpiWeightDiffEl = document.getElementById('kpi-weight-diff');
+            const kpiWeightGoalBox = document.getElementById('kpi-weight-goal-box');
+
+            if (weightRecords.length > 0) {
+                const latest = weightRecords[0].weight;
+                kpiWeightEl.textContent = latest.toFixed(1).replace('.', ',');
+                
+                if (activeProf && activeProf.height && activeProf.height > 0) {
+                    const heightM = activeProf.height / 100;
+                    const bmi = latest / (heightM * heightM);
+                    const bmiInfo = classifyBMI(bmi);
+                    kpiBmiBadge.textContent = `IMC ${bmi.toFixed(1).replace('.', ',')} (${bmiInfo.label})`;
+                    kpiBmiBadge.className = `text-[11px] font-semibold px-2 py-0.5 rounded-lg ${bmiInfo.classes}`;
+                    kpiBmiBadge.classList.remove('hidden');
+                } else {
+                    kpiBmiBadge.classList.add('hidden');
+                }
+
+                if (weightRecords.length > 1) {
+                    const prev = weightRecords[1].weight;
+                    const diff = latest - prev;
+                    const sign = diff > 0 ? '+' : '';
+                    const colorClass = diff < 0 ? 'text-emerald-600' : (diff > 0 ? 'text-amber-600' : 'text-slate-500');
+                    kpiWeightDiffEl.className = `mt-2 text-xs font-semibold ${colorClass}`;
+                    kpiWeightDiffEl.textContent = `${sign}${diff.toFixed(1).replace('.', ',')} kg vs anterior`;
+                } else {
+                    kpiWeightDiffEl.textContent = 'Primeiro registro';
+                }
+
+                if (activeProf && activeProf.targetWeight && activeProf.targetWeight > 0) {
+                    const target = activeProf.targetWeight;
+                    const startWeight = weightRecords[weightRecords.length - 1].weight;
+                    const remaining = latest - target;
+                    let pct = 0;
+                    if (Math.abs(remaining) < 0.05) pct = 100;
+                    else if (startWeight !== target) {
+                        const total = Math.abs(startWeight - target);
+                        const done = Math.abs(startWeight - latest);
+                        pct = Math.min(100, Math.max(0, Math.round((done / total) * 100)));
+                    }
+                    document.getElementById('kpi-weight-goal-text').textContent = `Alvo: ${target}kg`;
+                    document.getElementById('kpi-weight-goal-pct').textContent = `${pct}%`;
+                    document.getElementById('kpi-weight-goal-bar').style.width = `${pct}%`;
+                    kpiWeightGoalBox.classList.remove('hidden');
+                } else {
+                    kpiWeightGoalBox.classList.add('hidden');
+                }
+            } else {
+                kpiWeightEl.textContent = '--';
+                kpiBmiBadge.classList.add('hidden');
+                kpiWeightGoalBox.classList.add('hidden');
+                kpiWeightDiffEl.textContent = 'Sem registros';
+            }
+
+            const bpRecords = records.filter(r => r.systolic !== null && r.diastolic !== null);
+            const kpiBpEl = document.getElementById('kpi-bp');
+            const kpiBpmEl = document.getElementById('kpi-bpm');
+            const kpiBpStatusEl = document.getElementById('kpi-bp-status');
+
+            if (bpRecords.length > 0) {
+                const latestBp = bpRecords[0];
+                kpiBpEl.textContent = `${latestBp.systolic}/${latestBp.diastolic}`;
+                kpiBpmEl.textContent = latestBp.bpm ? `${latestBp.bpm} BPM` : '-- BPM';
+                const status = classifyBloodPressure(latestBp.systolic, latestBp.diastolic);
+                kpiBpStatusEl.textContent = status.label;
+                kpiBpStatusEl.className = `text-xs font-semibold px-2.5 py-0.5 rounded-full ${status.classes}`;
+            } else {
+                kpiBpEl.textContent = '--/--';
+                kpiBpmEl.textContent = '-- BPM';
+                kpiBpStatusEl.textContent = 'Aguardando dados';
+            }
+
+            const wDaily = dailyTotals(records, 'water'), cDaily = dailyTotals(records, 'calories');
+            const week = lastNDaysKeys(7);
+            const avgWater = avgDaily(wDaily, week) ?? avgDaily(wDaily, null);
+            const avgCal = avgDaily(cDaily, week) ?? avgDaily(cDaily, null);
+            const todayWater = wDaily.get(todayKey()) || 0, todayCal = cDaily.get(todayKey()) || 0;
+
+            document.getElementById('kpi-water').textContent = fmtNum(avgWater);
+            document.getElementById('kpi-calories').textContent = avgCal !== null ? Math.round(avgCal) : '--';
+            document.getElementById('kpi-water-today').textContent = `Hoje: ${fmtNum(todayWater, 2)} L`;
+            document.getElementById('kpi-cal-today').textContent = `Hoje: ${Math.round(todayCal)} kcal`;
+
+            const waterGoalBox = document.getElementById('kpi-water-goal-box');
+            if (activeProf && activeProf.targetWater && activeProf.targetWater > 0) {
+                const wPct = Math.min(100, Math.round((todayWater / activeProf.targetWater) * 100));
+                document.getElementById('kpi-water-goal-label').textContent = `Hoje / meta ${activeProf.targetWater}L`;
+                document.getElementById('kpi-water-goal-pct').textContent = `${wPct}%`;
+                document.getElementById('kpi-water-goal-bar').style.width = `${wPct}%`;
+                waterGoalBox.classList.remove('hidden');
+            } else {
+                waterGoalBox.classList.add('hidden');
+            }
+
+            const calGoalBox = document.getElementById('kpi-cal-goal-box');
+            if (activeProf && activeProf.targetCalories && activeProf.targetCalories > 0) {
+                const cPct = Math.min(100, Math.round((todayCal / activeProf.targetCalories) * 100));
+                document.getElementById('kpi-cal-goal-label').textContent = `Hoje / meta ${activeProf.targetCalories}`;
+                document.getElementById('kpi-cal-goal-pct').textContent = `${cPct}%`;
+                document.getElementById('kpi-cal-goal-bar').style.width = `${cPct}%`;
+                calGoalBox.classList.remove('hidden');
+            } else {
+                calGoalBox.classList.add('hidden');
+            }
+
+            const waistRecords = records.filter(r => r.waist !== null);
+            const kpiWaistEl = document.getElementById('kpi-waist');
+            const kpiWhtrBadge = document.getElementById('kpi-whtr-badge');
+            const kpiWaistDiffEl = document.getElementById('kpi-waist-diff');
+
+            if (waistRecords.length > 0) {
+                const latestW = waistRecords[0].waist;
+                kpiWaistEl.textContent = latestW.toFixed(1).replace('.', ',');
+                if (activeProf && activeProf.height && activeProf.height > 0) {
+                    const whtr = latestW / activeProf.height;
+                    const whtrInfo = classifyWHtR(whtr);
+                    kpiWhtrBadge.textContent = `RCE ${whtr.toFixed(2).replace('.', ',')} (${whtrInfo.label})`;
+                    kpiWhtrBadge.className = `text-[11px] font-semibold px-2 py-0.5 rounded-lg ${whtrInfo.classes}`;
+                    kpiWhtrBadge.classList.remove('hidden');
+                } else {
+                    kpiWhtrBadge.classList.add('hidden');
+                }
+                kpiWaistDiffEl.textContent = waistRecords.length > 1 ? `${(latestW - waistRecords[1].waist).toFixed(1)} cm vs anterior` : 'Primeira medida';
+            } else {
+                kpiWaistEl.textContent = '--';
+                kpiWhtrBadge.classList.add('hidden');
+                kpiWaistDiffEl.textContent = 'Sem registros';
+            }
+        }
+
+        function classifyBMI(bmi) {
+            if (bmi < 18.5) return { label: 'Abaixo', classes: 'bg-sky-100 text-sky-800' };
+            if (bmi < 25) return { label: 'Normal', classes: 'bg-emerald-100 text-emerald-800' };
+            if (bmi < 30) return { label: 'Sobrepeso', classes: 'bg-amber-100 text-amber-800' };
+            return { label: 'Obesidade', classes: 'bg-rose-100 text-rose-800' };
+        }
+
+        function classifyWHtR(whtr) {
+            if (whtr < 0.50) return { label: 'Baixo', classes: 'bg-emerald-100 text-emerald-800' };
+            if (whtr < 0.60) return { label: 'Moderado', classes: 'bg-amber-100 text-amber-800' };
+            return { label: 'Elevado', classes: 'bg-rose-100 text-rose-800' };
+        }
+
+        function classifyBloodPressure(sys, dia) {
+            if (sys < 120 && dia < 80) return { label: 'Ótima', classes: 'bg-emerald-100 text-emerald-800' };
+            if (sys <= 139 && dia <= 89) return { label: 'Normal / Pré', classes: 'bg-amber-100 text-amber-800' };
+            return { label: 'Alta', classes: 'bg-rose-100 text-rose-800' };
+        }
+
+        function setChartLimit(limit) {
+            chartLimit = limit;
+            [7, 30, 0].forEach(val => {
+                const btn = document.getElementById(`filter-${val}`);
+                if (val === limit) btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-600 text-teal-700 dark:text-teal-300 shadow-sm transition';
+                else btn.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 dark:text-slate-300 transition';
+            });
+            renderCharts();
+        }
+
+        function formatShortDate(isoStr) {
+            const d = new Date(isoStr);
+            return isNaN(d) ? '' : d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+        }
+
+        function calculateMovingAverage(values, windowSize = 7) {
+            return values.map((_, idx) => {
+                const start = Math.max(0, idx - windowSize + 1);
+                const slice = values.slice(start, idx + 1).filter(v => v !== null && v !== undefined);
+                if (slice.length === 0) return null;
+                return Number((slice.reduce((a, b) => a + b, 0) / slice.length).toFixed(2));
+            });
+        }
+
+        /* ---------- Motor de gráficos próprio (sem Chart.js, funciona offline) ---------- */
+        function niceStep(raw) {
+            const p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p;
+            return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * p;
+        }
+
+        function drawChart(canvas, cfg) {
+            const wrap = canvas.parentElement;
+            const dpr = window.devicePixelRatio || 1;
+            const W = wrap.clientWidth, H = wrap.clientHeight;
+            if (!W || !H) return;
+            canvas.width = W * dpr; canvas.height = H * dpr;
+            canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+            const ctx = canvas.getContext('2d');
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            ctx.clearRect(0, 0, W, H);
+            const dark = document.documentElement.classList.contains('dark');
+            const txt = dark ? '#94a3b8' : '#64748b', grid = dark ? 'rgba(51,65,85,0.6)' : 'rgba(226,232,240,0.9)';
+            const FONT = '11px system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+            ctx.font = FONT;
+            const tip = wrap.querySelector('.chart-tip') || Object.assign(wrap.appendChild(document.createElement('div')), { className: 'chart-tip' });
+            tip.style.cssText = 'position:absolute;display:none;pointer-events:none;z-index:5;padding:6px 8px;border-radius:8px;font-size:11px;line-height:1.35;white-space:nowrap;background:' + (dark ? '#0f172a' : '#ffffff') + ';color:' + (dark ? '#e2e8f0' : '#0f172a') + ';border:1px solid ' + (dark ? '#334155' : '#e2e8f0') + ';box-shadow:0 2px 8px rgba(0,0,0,.15)';
+            canvas.onpointermove = canvas.onpointerleave = null;
+
+            const n = cfg.labels.length;
+            if (!n || !cfg.datasets.some(d => d.data.some(v => v !== null && v !== undefined))) {
+                ctx.fillStyle = txt; ctx.textAlign = 'center'; ctx.fillText('Sem dados no período', W / 2, H / 2);
+                return;
+            }
+            // legenda (quebra de linha automática)
+            const items = cfg.datasets.map(d => ({ d, w: ctx.measureText(d.label).width + 26 }));
+            let lx = 8, ly = 10, lines = 1;
+            items.forEach(it => { if (lx + it.w > W - 8 && lx > 8) { lx = 8; ly += 16; lines++; } it.x = lx; it.y = ly; lx += it.w + 6; });
+            const hasY1 = cfg.datasets.some(d => d.axis === 'y1');
+            const pad = { l: 44, r: hasY1 ? 46 : 14, t: lines * 16 + 12, b: 24 };
+            const pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+            const scales = {};
+            ['y', 'y1'].forEach(ax => {
+                const ds = cfg.datasets.filter(d => (d.axis || 'y') === ax);
+                if (!ds.length) return;
+                const vals = [];
+                ds.forEach(d => d.data.forEach(v => { if (v !== null && v !== undefined) vals.push(v); }));
+                (cfg.refLines || []).filter(r => (r.axis || 'y') === ax).forEach(r => vals.push(r.value));
+                (cfg.bands || []).filter(r => (r.axis || 'y') === ax).forEach(r => vals.push(r.from, r.to));
+                if (!vals.length) return;
+                let min = Math.min(...vals), max = Math.max(...vals);
+                const bar = ds.some(d => d.type === 'bar');
+                if (bar) min = Math.min(min, 0);
+                if (min === max) { min -= 1; max += 1; }
+                const sp = (max - min) * 0.1;
+                if (!bar) min -= sp;
+                max += sp;
+                const step = niceStep((max - min) / 5);
+                min = Math.floor(min / step) * step; max = Math.ceil(max / step) * step;
+                scales[ax] = { min, max, step };
+            });
+            const X = i => pad.l + pw * (i + 0.5) / n;
+            const Y = (ax, v) => { const s = scales[ax] || scales.y; return pad.t + ph * (1 - (v - s.min) / (s.max - s.min)); };
+
+            // grade + rótulos dos eixos
+            ctx.textBaseline = 'middle';
+            ['y', 'y1'].forEach(ax => {
+                const s = scales[ax]; if (!s) return;
+                const col = ax === 'y1' ? (cfg.datasets.find(d => d.axis === 'y1').color) : txt;
+                for (let v = s.min; v <= s.max + s.step / 2; v += s.step) {
+                    const yy = Y(ax, v);
+                    if (ax === 'y') { ctx.strokeStyle = grid; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(W - pad.r, yy); ctx.stroke(); }
+                    ctx.fillStyle = col; ctx.textAlign = ax === 'y' ? 'right' : 'left';
+                    ctx.fillText(+v.toFixed(2), ax === 'y' ? pad.l - 6 : W - pad.r + 6, yy);
+                }
+            });
+            // eixo X
+            ctx.fillStyle = txt; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+            const every = Math.max(1, Math.ceil(n / Math.max(2, Math.floor(pw / 48))));
+            cfg.labels.forEach((l, i) => { if (i % every === 0 || i === n - 1 && (n - 1) % every === 0) ctx.fillText(l, X(i), H - pad.b + 7); });
+
+            // faixas e linhas de referência
+            (cfg.bands || []).forEach(bd => {
+                const y1 = Y(bd.axis || 'y', bd.to), y2 = Y(bd.axis || 'y', bd.from);
+                ctx.fillStyle = bd.color; ctx.fillRect(pad.l, y1, pw, y2 - y1);
+            });
+            (cfg.refLines || []).forEach(r => {
+                const yy = Y(r.axis || 'y', r.value);
+                ctx.strokeStyle = r.color; ctx.lineWidth = 1.2; ctx.setLineDash([6, 4]);
+                ctx.beginPath(); ctx.moveTo(pad.l, yy); ctx.lineTo(W - pad.r, yy); ctx.stroke(); ctx.setLineDash([]);
+                if (r.label) { const left = r.axis === 'y1'; ctx.fillStyle = r.color; ctx.textAlign = left ? 'left' : 'right'; ctx.textBaseline = left ? 'top' : 'bottom'; ctx.fillText(r.label, left ? pad.l + 4 : W - pad.r - 4, left ? yy + 2 : yy - 2); }
+            });
+
+            // barras
+            const bars = cfg.datasets.filter(d => d.type === 'bar');
+            bars.forEach((d, bi) => {
+                const slot = Math.min(pw / n * 0.7, 40), bw = slot / bars.length;
+                ctx.fillStyle = d.color;
+                d.data.forEach((v, i) => {
+                    if (v === null || v === undefined) return;
+                    const x0 = X(i) - slot / 2 + bi * bw, y0 = Y(d.axis || 'y', 0), y1 = Y(d.axis || 'y', v);
+                    ctx.fillRect(x0, Math.min(y0, y1), Math.max(1, bw - 1), Math.abs(y0 - y1));
+                });
+            });
+            // linhas
+            cfg.datasets.filter(d => d.type !== 'bar').forEach(d => {
+                const pts = d.data.map((v, i) => v === null || v === undefined ? null : [X(i), Y(d.axis || 'y', v)]).filter(Boolean);
+                if (!pts.length) return;
+                if (d.fill && pts.length > 1) {
+                    ctx.beginPath(); ctx.moveTo(pts[0][0], H - pad.b);
+                    pts.forEach(p => ctx.lineTo(p[0], p[1])); ctx.lineTo(pts[pts.length - 1][0], H - pad.b); ctx.closePath();
+                    ctx.fillStyle = d.color + '22'; ctx.fill();
+                }
+                ctx.strokeStyle = d.color; ctx.lineWidth = d.width || 2; ctx.lineJoin = 'round';
+                ctx.setLineDash(d.dash || []); ctx.beginPath();
+                pts.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.stroke(); ctx.setLineDash([]);
+                if (d.points !== false) { ctx.fillStyle = d.color; pts.forEach(p => { ctx.beginPath(); ctx.arc(p[0], p[1], 3, 0, 6.2832); ctx.fill(); }); }
+            });
+            // legenda
+            ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+            items.forEach(({ d, x, y }) => {
+                ctx.fillStyle = d.color;
+                if (d.type === 'bar') ctx.fillRect(x, y - 5, 10, 10); else ctx.fillRect(x, y - 1.5, 14, 3);
+                ctx.fillStyle = txt; ctx.fillText(d.label, x + (d.type === 'bar' ? 14 : 18), y);
+            });
+            // tooltip
+            canvas.onpointermove = ev => {
+                const r = canvas.getBoundingClientRect(), mx = ev.clientX - r.left;
+                const i = Math.max(0, Math.min(n - 1, Math.floor((mx - pad.l) / (pw / n))));
+                const rows = cfg.datasets.filter(d => d.data[i] !== null && d.data[i] !== undefined)
+                    .map(d => `<div><span style="color:${d.color}">●</span> ${esc(d.label)}: <b>${+Number(d.data[i]).toFixed(2)}</b></div>`).join('');
+                if (!rows) { tip.style.display = 'none'; return; }
+                tip.innerHTML = `<div style="font-weight:600;margin-bottom:2px">${esc((cfg.tipLabels || cfg.labels)[i])}</div>${rows}`;
+                tip.style.display = 'block';
+                const tw = tip.offsetWidth;
+                tip.style.left = Math.max(0, Math.min(W - tw, X(i) - tw / 2)) + 'px';
+                tip.style.top = Math.max(0, pad.t - 4) + 'px';
+            };
+            canvas.onpointerleave = () => { tip.style.display = 'none'; };
+        }
+
+        function renderWeekCompare() {
+            const el = document.getElementById('week-compare');
+            if (!el) return;
+            const recs = getProfileRecords();
+            const cur = lastNDaysKeys(7), prev = lastNDaysKeys(7, 7);
+            const inKeys = (keys, f) => recs.filter(r => keys.includes(dayKey(r.datetime)) && r[f] !== null && r[f] !== undefined).map(r => r[f]);
+            const mean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : null;
+            const perDay = (keys, f) => avgDaily(dailyTotals(recs, f), keys);
+            const metrics = [
+                { name: 'Peso médio', unit: 'kg', get: k => mean(inKeys(k, 'weight')), d: 1 },
+                { name: 'Sistólica média', unit: 'mmHg', get: k => mean(inKeys(k, 'systolic')), d: 0 },
+                { name: 'Diastólica média', unit: 'mmHg', get: k => mean(inKeys(k, 'diastolic')), d: 0 },
+                { name: 'Glicemia média', unit: 'mg/dL', get: k => mean(inKeys(k, 'glucose')), d: 0 },
+                { name: 'Água por dia', unit: 'L', get: k => perDay(k, 'water'), d: 2 },
+                { name: 'Calorias por dia', unit: 'kcal', get: k => perDay(k, 'calories'), d: 0 },
+                { name: 'Sono por dia', unit: 'h', get: k => perDay(k, 'sleepHours'), d: 1 }
+            ].map(m => ({ ...m, c: m.get(cur), p: m.get(prev) })).filter(m => m.c !== null || m.p !== null);
+            if (!metrics.length) { el.innerHTML = '<p class="col-span-full text-xs text-slate-500 dark:text-slate-400">Sem registros nas últimas duas semanas.</p>'; return; }
+            el.innerHTML = metrics.map(m => {
+                let diff = '<span class="text-slate-400">sem comparação</span>';
+                if (m.c !== null && m.p !== null) {
+                    const dv = m.c - m.p, sign = dv > 0 ? '▲ +' : dv < 0 ? '▼ ' : '= ';
+                    diff = `<span class="text-slate-600 dark:text-slate-300">${sign}${fmtNum(dv, m.d)} vs. ${fmtNum(m.p, m.d)}</span>`;
+                }
+                return `<div class="rounded-xl bg-slate-50 dark:bg-slate-700/40 p-3">
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">${m.name}</p>
+                    <p class="text-base font-bold text-slate-900 dark:text-white">${fmtNum(m.c, m.d)} <span class="text-[11px] font-normal text-slate-500">${m.unit}</span></p>
+                    <p class="text-[11px] mt-0.5">${diff}</p></div>`;
+            }).join('');
+        }
+
+        function renderCharts() {
+            const records = getProfileRecords();
+            const prof = getActiveProfile();
+            renderWeekCompare();
+            const cutoff = chartLimit > 0 ? lastNDaysKeys(chartLimit)[0] : '0000-00-00';
+            const chrono = [...records].reverse().filter(r => dayKey(r.datetime) >= cutoff);
+            const lbl = r => formatShortDate(r.datetime);
+            const tipL = r => { const d = new Date(r.datetime); return isNaN(d) ? '' : d.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }); };
+            const get = id => document.getElementById(id);
+
+            // 1) Corpo
+            const body = chrono.filter(r => r.weight !== null || r.waist !== null || r.bodyfat !== null);
+            const weights = body.map(r => r.weight);
+            drawChart(get('bodyChart'), {
+                labels: body.map(lbl), tipLabels: body.map(tipL),
+                datasets: [
+                    { label: 'Peso (kg)', data: weights, color: '#0d9488', fill: true },
+                    { label: 'Média móvel (7 reg.)', data: calculateMovingAverage(weights, 7), color: '#0284c7', points: false, width: 1.5 },
+                    { label: 'Cintura (cm)', data: body.map(r => r.waist), color: '#9333ea' },
+                    { label: 'Gordura (%)', data: body.map(r => r.bodyfat), color: '#f97316', axis: 'y1' }
+                ],
+                refLines: prof && prof.targetWeight ? [{ value: prof.targetWeight, color: '#10b981', label: `Meta ${prof.targetWeight} kg` }] : []
+            });
+
+            // 2) Pressão
+            const vit = chrono.filter(r => r.systolic !== null || r.diastolic !== null || r.bpm !== null);
+            drawChart(get('vitalsChart'), {
+                labels: vit.map(lbl), tipLabels: vit.map(tipL),
+                datasets: [
+                    { label: 'Sistólica', data: vit.map(r => r.systolic), color: '#e11d48' },
+                    { label: 'Diastólica', data: vit.map(r => r.diastolic), color: '#f472b6' },
+                    { label: 'BPM', data: vit.map(r => r.bpm), color: '#0d9488', dash: [4, 4], width: 1.5 }
+                ],
+                refLines: [
+                    { value: 120, color: '#10b981', label: '120' }, { value: 80, color: '#10b981', label: '80' },
+                    { value: 140, color: '#f59e0b', label: '140' }, { value: 90, color: '#f59e0b', label: '90' }
+                ]
+            });
+
+            // 3) Glicemia
+            const glu = chrono.filter(r => r.glucose !== null);
+            drawChart(get('glucoseChart'), {
+                labels: glu.map(lbl), tipLabels: glu.map(tipL),
+                datasets: [{ label: 'Glicemia (mg/dL)', data: glu.map(r => r.glucose), color: '#7c3aed' }],
+                bands: [{ from: 70, to: 99, color: 'rgba(16,185,129,0.14)' }]
+            });
+
+            // 4) Hábitos (totais por dia)
+            const per = chrono;
+            const w = dailyTotals(per, 'water'), s = dailyTotals(per, 'sleepHours'), c = dailyTotals(per, 'calories');
+            const days = [...new Set([...w.keys(), ...s.keys(), ...c.keys()])].sort();
+            const dl = k => `${k.slice(8, 10)}/${k.slice(5, 7)}`;
+            drawChart(get('habitsChart'), {
+                labels: days.map(dl),
+                datasets: [
+                    { type: 'bar', label: 'Água (L)', data: days.map(k => w.has(k) ? +w.get(k).toFixed(2) : null), color: '#0ea5e9' },
+                    { type: 'bar', label: 'Sono (h)', data: days.map(k => s.has(k) ? s.get(k) : null), color: '#10b981' },
+                    { label: 'Calorias (kcal)', data: days.map(k => c.has(k) ? c.get(k) : null), color: '#f59e0b', axis: 'y1' }
+                ],
+                refLines: [
+                    ...(prof && prof.targetWater ? [{ value: prof.targetWater, color: '#0ea5e9', label: `Meta ${prof.targetWater} L` }] : []),
+                    ...(prof && prof.targetCalories ? [{ value: prof.targetCalories, axis: 'y1', color: '#f59e0b', label: `Meta ${prof.targetCalories}` }] : [])
+                ]
+            });
+        }
+
+        function populateMonthFilter() {
+            const records = getProfileRecords();
+            const select = document.getElementById('history-month-filter');
+            const currentVal = select.value;
+            const monthsMap = new Map();
+
+            records.forEach(r => {
+                const d = new Date(r.datetime);
+                if (!isNaN(d)) {
+                    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+                    const label = d.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' });
+                    monthsMap.set(key, label.charAt(0).toUpperCase() + label.slice(1));
+                }
+            });
+
+            select.innerHTML = '<option value="all">Todos os meses</option>';
+            monthsMap.forEach((label, key) => {
+                const opt = document.createElement('option');
+                opt.value = key;
+                opt.textContent = label;
+                select.appendChild(opt);
+            });
+            if (monthsMap.has(currentVal)) select.value = currentVal;
+        }
+
+        function getFilteredProfileRecords() {
+            const records = getProfileRecords();
+            const searchQuery = (document.getElementById('history-search').value || '').toLowerCase().trim();
+            const catFilter = document.getElementById('history-category-filter').value;
+            const monthFilter = document.getElementById('history-month-filter').value;
+
+            return records.filter(rec => {
+                if (monthFilter && monthFilter !== 'all') {
+                    const d = new Date(rec.datetime);
+                    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+                    if (key !== monthFilter) return false;
+                }
+                if (catFilter === 'vitals' && !(rec.systolic || rec.diastolic || rec.bpm || rec.glucose)) return false;
+                if (catFilter === 'body' && !(rec.weight || rec.waist || rec.abdomen)) return false;
+                if (catFilter === 'habits' && !(rec.water || rec.calories || rec.sleepHours)) return false;
+                if (searchQuery) {
+                    const haystack = `${rec.activity || ''} ${rec.notes || ''}`.toLowerCase();
+                    if (!haystack.includes(searchQuery)) return false;
+                }
+                return true;
+            });
+        }
+
+        function renderTable() {
+            const records = getFilteredProfileRecords();
+            const tbody = document.getElementById('history-table-body');
+            const emptyState = document.getElementById('empty-state');
+            document.getElementById('total-records-badge').textContent = records.length;
+            tbody.innerHTML = '';
+
+            if (records.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+
+            records.forEach(rec => {
+                const d = new Date(rec.datetime);
+                const dateStr = isNaN(d) ? '' : `${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}`;
+
+                const vitals = (rec.systolic && rec.diastolic) ? `${rec.systolic}/${rec.diastolic} mmHg` : '-';
+                const weight = rec.weight ? `${rec.weight} kg` : '-';
+                const waist = rec.waist ? `Cint: ${rec.waist}cm` : '-';
+                const habits = [rec.water ? `${rec.water}L` : '', rec.calories ? `${rec.calories}kcal` : ''].filter(Boolean).join(' • ') || '-';
+
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50/80 dark:hover:bg-slate-700/30 transition';
+                tr.innerHTML = `
+                    <td class="py-3 px-4 font-medium text-xs whitespace-nowrap">${dateStr}</td>
+                    <td class="py-3 px-4 text-xs whitespace-nowrap">${vitals} ${rec.bpm ? `(${rec.bpm}bpm)` : ''}${rec.glucose ? `<div class="text-slate-500">Glic: ${rec.glucose} mg/dL</div>` : ''}</td>
+                    <td class="py-3 px-4 text-xs whitespace-nowrap">${weight}</td>
+                    <td class="py-3 px-4 text-xs">${waist}</td>
+                    <td class="py-3 px-4 text-xs">${habits}</td>
+                    <td class="py-3 px-4 text-xs">${esc(rec.activity) || '-'}</td>
+                    <td class="py-3 px-4 text-xs text-slate-500">${esc(rec.notes) || '-'}</td>
+                    <td class="py-3 px-4 text-right whitespace-nowrap">
+                        <button onclick="editRecord('${esc(rec.id)}')" title="Editar" class="p-1.5 rounded-lg text-slate-500 hover:text-teal-600"><i class="fa-solid fa-pen"></i></button>
+                        <button onclick="requestDeleteRecord('${esc(rec.id)}')" title="Excluir" class="p-1.5 rounded-lg text-slate-500 hover:text-rose-600 ml-1"><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function renderAll() {
+            renderProfileUI();
+            populateMonthFilter();
+            renderKPIs();
+            renderCharts();
+            renderTable();
+        }
+
+        function buildMedicalReportHTML() {
+            const prof = getActiveProfile();
+            const records = getFilteredProfileRecords();
+            const todayStr = new Date().toLocaleDateString('pt-BR');
+
+            const rows = records.map(r => `
+                <tr class="border-b border-slate-200 text-xs">
+                    <td class="py-2 px-2">${new Date(r.datetime).toLocaleDateString('pt-BR')}</td>
+                    <td class="py-2 px-2">${r.systolic ? `${r.systolic}/${r.diastolic} mmHg` : '-'}</td>
+                    <td class="py-2 px-2">${r.bpm ? `${r.bpm} bpm` : '-'}</td>
+                    <td class="py-2 px-2">${r.glucose ? `${r.glucose} mg/dL` : '-'}</td>
+                    <td class="py-2 px-2">${r.weight ? `${r.weight} kg` : '-'}</td>
+                    <td class="py-2 px-2">${r.waist ? `${r.waist} cm` : '-'}</td>
+                    <td class="py-2 px-2">${esc(r.notes) || '-'}</td>
+                </tr>
+            `).join('');
+
+            return `
+                <div class="font-sans text-slate-900 space-y-6">
+                    <div class="border-b-2 border-teal-600 pb-4 flex justify-between items-end">
+                        <div>
+                            <h1 class="text-2xl font-bold">Relatório Médico - VitalTrack</h1>
+                            <p class="text-sm font-semibold mt-1">${esc(prof.name)} ${prof.relation ? `(${esc(prof.relation)})` : ''}</p>
+                        </div>
+                        <div class="text-right text-xs text-slate-500">Emitido em: ${todayStr}</div>
+                    </div>
+                    <table class="w-full text-left border-collapse border border-slate-300">
+                        <thead>
+                            <tr class="bg-slate-100 border-b border-slate-300 text-[11px] font-bold uppercase">
+                                <th class="py-2 px-2">Data</th>
+                                <th class="py-2 px-2">Pressão</th>
+                                <th class="py-2 px-2">BPM</th>
+                                <th class="py-2 px-2">Glicemia</th>
+                                <th class="py-2 px-2">Peso</th>
+                                <th class="py-2 px-2">Cintura</th>
+                                <th class="py-2 px-2">Observações</th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                </div>
+            `;
+        }
+
+        function openReportModal() {
+            const html = buildMedicalReportHTML();
+            document.getElementById('report-modal-body').innerHTML = html;
+            document.getElementById('printable-area').innerHTML = html;
+            const modal = document.getElementById('report-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeReportModal() {
+            const modal = document.getElementById('report-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function triggerPrintReport() {
+            window.print();
+        }
+
+        function initPWA() {
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPwaPrompt = e;
+                const btn = document.getElementById('pwa-install-btn');
+                if (btn) btn.classList.remove('hidden');
+            });
+        }
+
+        async function installPWA() {
+            if (deferredPwaPrompt) {
+                deferredPwaPrompt.prompt();
+                deferredPwaPrompt = null;
+            } else {
+                const modal = document.getElementById('pwa-help-modal');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+        }
+
+        function closePwaHelpModal() {
+            const modal = document.getElementById('pwa-help-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function csvCell(v) {
+            const s = String(v ?? '').replace(/"/g, '""');
+            return `"${s}"`;
+        }
+
+        function exportCSV() {
+            const records = getProfileRecords();
+            const prof = getActiveProfile();
+            if (records.length === 0) return showToast('Sem dados para exportar.', 'error');
+
+            const headers = ['Data_Hora', 'Sistolica', 'Diastolica', 'BPM', 'Glicose', 'Peso', 'Gordura', 'Cintura', 'Abdomen', 'Agua', 'Calorias', 'Sono_h', 'Sono_qualidade', 'Atividade', 'Observacoes'];
+            const rows = records.map(r => [
+                r.datetime, r.systolic, r.diastolic, r.bpm, r.glucose, r.weight, r.bodyfat, r.waist, r.abdomen,
+                r.water, r.calories, r.sleepHours, r.sleepQuality, r.activity, r.notes
+            ].map(csvCell).join(';'));
+            const blob = new Blob(['\uFEFF' + [headers.join(';'), ...rows].join('\n')], { type: 'text/csv;charset=utf-8;' });
+            downloadBlob(blob, `saude-${prof.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.csv`);
+        }
+
+        function exportJSON() {
+            const payload = { app: 'VitalTrack', exportedAt: new Date().toISOString(), profiles, records: allRecords };
+            const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+            downloadBlob(blob, `vitaltrack_backup_${todayKey()}.json`);
+            markBackup();
+        }
+
+        function importJSON(event) {
+            const input = event.target;
+            const file = input.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                input.value = '';
+                let parsed;
+                try {
+                    parsed = JSON.parse(e.target.result);
+                } catch (err) {
+                    return showToast('Arquivo inválido.', 'error');
+                }
+                if (!parsed || !Array.isArray(parsed.records)) return showToast('Arquivo inválido: sem registros.', 'error');
+
+                let newProfiles = Array.isArray(parsed.profiles)
+                    ? parsed.profiles.filter(p => p && p.id && p.name)
+                    : [];
+                if (newProfiles.length === 0) newProfiles = profiles.slice();
+                const fallbackId = newProfiles[0].id;
+                const newRecords = parsed.records
+                    .map(r => normalizeRecord(r, fallbackId))
+                    .filter(Boolean)
+                    .map(r => newProfiles.some(p => p.id === r.profileId) ? r : { ...r, profileId: fallbackId });
+
+                openConfirmModal('Restaurar Backup',
+                    `Isto substituirá TODOS os dados atuais por ${newRecords.length} registro(s) e ${newProfiles.length} perfil(is) do arquivo. Continuar?`,
+                    () => {
+                        profiles = newProfiles;
+                        allRecords = newRecords;
+                        if (!profiles.some(p => p.id === activeProfileId)) {
+                            activeProfileId = profiles[0].id;
+                            localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
+                        }
+                        saveProfiles();
+                        saveRecords();
+                        resetForm();
+                        renderAll();
+                        showToast('Dados restaurados com sucesso!');
+                    });
+            };
+            reader.readAsText(file);
+        }
+
+        function downloadBlob(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function requestClearProfileRecords() {
+            openConfirmModal('Limpar Histórico', 'Deseja apagar todos os registros deste perfil?', () => {
+                allRecords = allRecords.filter(r => r.profileId !== activeProfileId);
+                saveRecords();
+                renderAll();
+                showToast('Histórico limpo.', 'info');
+            });
+        }
+
+        // Service worker: permite abrir offline e instalar como app (só funciona em https)
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+            window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+        }
+    </script>
+</body>
+</html>
