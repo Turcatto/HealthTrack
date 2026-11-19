@@ -91,6 +91,7 @@
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-md: 28rem;
+    --container-lg: 32rem;
     --container-2xl: 42rem;
     --container-4xl: 56rem;
     --container-7xl: 80rem;
@@ -112,6 +113,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
     --leading-tight: 1.25;
     --radius-lg: 0.5rem;
@@ -305,6 +307,9 @@
   .inset-0 {
     inset: 0px;
   }
+  .inset-x-0 {
+    inset-inline: 0px;
+  }
   .top-0 {
     top: 0px;
   }
@@ -320,8 +325,14 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
-  .bottom-5 {
-    bottom: calc(var(--spacing) * 5);
+  .bottom-0 {
+    bottom: 0px;
+  }
+  .bottom-20 {
+    bottom: calc(var(--spacing) * 20);
+  }
+  .bottom-40 {
+    bottom: calc(var(--spacing) * 40);
   }
   .left-3 {
     left: calc(var(--spacing) * 3);
@@ -329,11 +340,17 @@
   .z-30 {
     z-index: 30;
   }
+  .z-40 {
+    z-index: 40;
+  }
   .z-50 {
     z-index: 50;
   }
   .order-2 {
     order: 2;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .col-span-full {
     grid-column: 1 / -1;
@@ -410,8 +427,14 @@
   .ml-1 {
     margin-left: var(--spacing);
   }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
   .block {
     display: block;
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
@@ -440,6 +463,9 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -457,6 +483,9 @@
   }
   .max-h-\[75vh\] {
     max-height: 75vh;
+  }
+  .max-h-\[92vh\] {
+    max-height: 92vh;
   }
   .min-h-\[4rem\] {
     min-height: 4rem;
@@ -534,6 +563,9 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -560,6 +592,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * 0.5);
   }
   .gap-1 {
     gap: var(--spacing);
@@ -607,6 +642,12 @@
     margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
   }
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
+  }
   :where(.divide-y > :not(:last-child)) {
     --tw-divide-y-reverse: 0;
     border-bottom-style: var(--tw-border-style);
@@ -645,6 +686,10 @@
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
+  }
+  .rounded-t-2xl {
+    border-top-left-radius: var(--radius-2xl);
+    border-top-right-radius: var(--radius-2xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -779,10 +824,22 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-white\/20 {
+    background-color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
   .bg-white\/70 {
     background-color: color-mix(in srgb, #fff 70%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
+    }
+  }
+  .bg-white\/95 {
+    background-color: color-mix(in srgb, #fff 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
     }
   }
   .p-1 {
@@ -848,9 +905,6 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -860,11 +914,17 @@
   .pt-2\.5 {
     padding-top: calc(var(--spacing) * 2.5);
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pr-3 {
     padding-right: calc(var(--spacing) * 3);
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .pb-40 {
+    padding-bottom: calc(var(--spacing) * 40);
   }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
@@ -927,12 +987,19 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
   .tracking-wider {
     --tw-tracking: var(--tracking-wider);
     letter-spacing: var(--tracking-wider);
   }
   .whitespace-nowrap {
     white-space: nowrap;
+  }
+  .whitespace-pre-line {
+    white-space: pre-line;
   }
   .text-amber-400 {
     color: var(--color-amber-400);
@@ -1047,9 +1114,20 @@
       --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-teal-600) 20%, transparent) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-teal-900\/40 {
+    --tw-shadow-color: color-mix(in srgb, oklch(38.6% 0.063 188.416) 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-teal-900) 40%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .ring-offset-2 {
     --tw-ring-offset-width: 2px;
     --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  }
+  .backdrop-blur {
+    --tw-backdrop-blur: blur(8px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
@@ -1136,6 +1214,14 @@
     .hover\:bg-teal-700:hover {
       background-color: var(--color-teal-700);
     }
+    .hover\:bg-white\/30:hover {
+      background-color: color-mix(in srgb, #fff 30%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-white\/30:hover {
+        background-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+      }
+    }
     .hover\:text-rose-600:hover {
       color: var(--color-rose-600);
     }
@@ -1158,6 +1244,12 @@
   .focus\:border-teal-500:focus {
     border-color: var(--color-teal-500);
   }
+  .active\:scale-95:active {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
   .active\:scale-\[0\.99\]:active {
     scale: 0.99;
   }
@@ -1165,11 +1257,23 @@
     .sm\:order-3 {
       order: 3;
     }
+    .sm\:max-w-lg {
+      max-width: var(--container-lg);
+    }
     .sm\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .sm\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .sm\:items-center {
+      align-items: center;
+    }
+    .sm\:rounded-2xl {
+      border-radius: var(--radius-2xl);
+    }
+    .sm\:p-4 {
+      padding: calc(var(--spacing) * 4);
     }
     .sm\:px-6 {
       padding-inline: calc(var(--spacing) * 6);
@@ -1199,6 +1303,12 @@
     .md\:col-span-6 {
       grid-column: span 6 / span 6;
     }
+    .md\:block {
+      display: block;
+    }
+    .md\:hidden {
+      display: none;
+    }
     .md\:inline {
       display: inline;
     }
@@ -1210,11 +1320,23 @@
     }
   }
   @media (width >= 64rem) {
-    .lg\:col-span-5 {
-      grid-column: span 5 / span 5;
+    .lg\:bottom-5 {
+      bottom: calc(var(--spacing) * 5);
     }
-    .lg\:col-span-7 {
-      grid-column: span 7 / span 7;
+    .lg\:bottom-24 {
+      bottom: calc(var(--spacing) * 24);
+    }
+    .lg\:col-span-12 {
+      grid-column: span 12 / span 12;
+    }
+    .lg\:block {
+      display: block;
+    }
+    .lg\:grid {
+      display: grid;
+    }
+    .lg\:hidden {
+      display: none;
     }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1230,6 +1352,9 @@
     }
     .lg\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
+    }
+    .lg\:pb-28 {
+      padding-bottom: calc(var(--spacing) * 28);
     }
   }
   :where(.dark\:divide-slate-700:where(.dark, .dark *) > :not(:last-child)) {
@@ -1281,6 +1406,12 @@
     background-color: color-mix(in srgb, oklch(38.1% 0.176 304.987) 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-purple-900) 40%, transparent);
+    }
+  }
+  .dark\:bg-rose-900\/20:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(41% 0.159 10.272) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rose-900) 20%, transparent);
     }
   }
   .dark\:bg-rose-900\/30:where(.dark, .dark *) {
@@ -1359,6 +1490,12 @@
     background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
+    }
+  }
+  .dark\:bg-slate-900\/95:where(.dark, .dark *) {
+    background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 95%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-slate-900) 95%, transparent);
     }
   }
   .dark\:bg-teal-900\/20:where(.dark, .dark *) {
@@ -1636,6 +1773,21 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1677,6 +1829,9 @@
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
       --tw-duration: initial;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
     }
   }
 }
@@ -1686,6 +1841,7 @@
     <style>
         /* Ícones embutidos (substituem Font Awesome, que não carrega em alguns visualizadores) */
         i.fa-solid, i.fa-brands { display:inline-block; width:1em; height:1em; vertical-align:-0.125em; background-color:currentColor; -webkit-mask:var(--ic) center/contain no-repeat; mask:var(--ic) center/contain no-repeat; }
+        .fa-plus { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14'/%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E"); }
         .fa-xmark { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='M6 6l12 12'/%3E%3C/svg%3E"); }
         .fa-user-plus { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M19 8v6'/%3E%3Cpath d='M22 11h-6'/%3E%3C/svg%3E"); }
         .fa-trash { --ic:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6'/%3E%3Cpath d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/%3E%3Cpath d='M10 11v6'/%3E%3Cpath d='M14 11v6'/%3E%3C/svg%3E"); }
@@ -1766,13 +1922,24 @@
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col antialiased">
 
     <!-- Notificação Toast -->
-    <div id="toast-container" class="no-print fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+    <div id="toast-container" class="no-print fixed bottom-40 lg:bottom-24 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
     <!-- Modal de Confirmação Customizado -->
+    <nav id="bottom-nav" class="no-print lg:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-t border-slate-200 dark:border-slate-700 grid grid-cols-3" style="padding-bottom: env(safe-area-inset-bottom, 0px)" aria-label="Navegação principal">
+        <button type="button" id="nav-resumo" onclick="showView('resumo')" class="flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400"><i class="fa-solid fa-heart-pulse text-lg"></i>Resumo</button>
+        <button type="button" id="nav-graficos" onclick="showView('graficos')" class="flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400"><i class="fa-solid fa-chart-line text-lg"></i>Gráficos</button>
+        <button type="button" id="nav-historico" onclick="showView('historico')" class="flex flex-col items-center gap-0.5 py-2.5 text-[11px] font-semibold text-slate-500 dark:text-slate-400"><i class="fa-solid fa-clock-rotate-left text-lg"></i>Histórico</button>
+    </nav>
+
+    <button type="button" id="fab-add" onclick="openEntryModal()" aria-label="Novo registro" title="Novo registro"
+        class="no-print fixed bottom-20 lg:bottom-5 right-5 z-30 h-14 px-5 rounded-full bg-teal-600 hover:bg-teal-700 active:scale-95 text-white font-semibold text-sm shadow-lg shadow-teal-900/40 flex items-center gap-2 transition">
+        <i class="fa-solid fa-plus text-lg"></i> Novo registro
+    </button>
+
     <div id="confirm-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
         <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl max-w-md w-full p-6 border border-slate-200 dark:border-slate-700">
             <h3 id="modal-title" class="text-base font-bold text-slate-900 dark:text-white mb-2">Confirmação</h3>
-            <p id="modal-message" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">Tem certeza que deseja prosseguir?</p>
+            <p id="modal-message" class="whitespace-pre-line text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">Tem certeza que deseja prosseguir?</p>
             <div class="flex items-center justify-end gap-3">
                 <button type="button" id="modal-cancel" class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 text-xs font-semibold transition">Cancelar</button>
                 <button type="button" id="modal-confirm" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold transition">Confirmar</button>
@@ -1832,15 +1999,23 @@
                             </div>
                         </div>
 
+                        <div class="grid grid-cols-2 gap-2.5">
+                            <div id="prof-current-weight-wrap">
+                                <label for="prof-current-weight" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Peso Atual (kg)</label>
+                                <input type="number" step="0.1" id="prof-current-weight" placeholder="Ex: 82.5" min="20" max="400"
+                                    class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                            </div>
+                            <div>
+                                <label for="prof-target-weight" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Peso Alvo (kg)</label>
+                                <input type="number" step="0.1" id="prof-target-weight" placeholder="Ex: 75.0" min="20" max="400"
+                                    class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 text-sm focus:border-teal-500 outline-none">
+                            </div>
+                        </div>
+
                         <!-- Metas Pessoais -->
                         <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
                             <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">Metas Individuais (Opcional)</p>
                             <div class="grid grid-cols-2 gap-2.5">
-                                <div>
-                                    <label for="prof-target-weight" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Peso Alvo (kg)</label>
-                                    <input type="number" step="0.1" id="prof-target-weight" placeholder="Ex: 75.0" min="20" max="300"
-                                        class="w-full rounded-xl border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-1.5 text-sm focus:border-teal-500 outline-none">
-                                </div>
                                 <div>
                                     <label for="prof-target-waist" class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1">Meta Cintura (cm)</label>
                                     <input type="number" step="0.5" id="prof-target-waist" placeholder="Ex: 80" min="30" max="200"
@@ -2002,7 +2177,7 @@
     </header>
 
     <!-- Conteúdo Principal -->
-    <main class="no-print flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+    <main class="no-print flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-40 lg:pb-28 space-y-6">
 
         <!-- Lembrete de backup -->
         <div id="backup-banner" class="hidden flex-wrap items-center justify-between gap-3 px-4 py-3 rounded-2xl border border-amber-300 bg-amber-50 text-amber-900 dark:bg-amber-900/20 dark:border-amber-700 dark:text-amber-200 text-xs">
@@ -2033,16 +2208,16 @@
         </div>
 
         <!-- 1. PAINEL DE RESUMO (KPIs) -->
-        <section aria-label="Resumo de Indicadores">
+        <section id="view-resumo" class="lg:block" aria-label="Resumo de Indicadores">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 
                 <!-- KPI 1: Peso, IMC & Meta -->
                 <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
                     <div class="flex items-center justify-between">
                         <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Último Peso & IMC</span>
-                        <div class="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                        <div class="flex items-center gap-2"><button type="button" onclick="openEntryModal('body')" class="px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-1"><i class="fa-solid fa-circle-plus"></i> Registrar</button><div class="w-8 h-8 rounded-lg bg-teal-50 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center">
                             <i class="fa-solid fa-weight-scale"></i>
-                        </div>
+                        </div></div>
                     </div>
                     <div class="mt-3 flex items-baseline justify-between gap-2">
                         <div>
@@ -2072,9 +2247,9 @@
                 <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
                     <div class="flex items-center justify-between">
                         <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pressão Arterial</span>
-                        <div class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 flex items-center justify-center">
+                        <div class="flex items-center gap-2"><button type="button" onclick="openEntryModal('vitals')" class="px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-1"><i class="fa-solid fa-circle-plus"></i> Registrar</button><div class="w-8 h-8 rounded-lg bg-rose-50 dark:bg-rose-900/40 text-rose-600 dark:text-rose-400 flex items-center justify-center">
                             <i class="fa-solid fa-heart"></i>
-                        </div>
+                        </div></div>
                     </div>
                     <div class="mt-3 flex items-baseline justify-between">
                         <div>
@@ -2096,9 +2271,9 @@
                 <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
                     <div class="flex items-center justify-between">
                         <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Média diária (7d)</span>
-                        <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center">
+                        <div class="flex items-center gap-2"><button type="button" onclick="openEntryModal('habits')" class="px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-1"><i class="fa-solid fa-circle-plus"></i> Registrar</button><div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-900/40 text-sky-600 dark:text-sky-400 flex items-center justify-center">
                             <i class="fa-solid fa-droplet"></i>
-                        </div>
+                        </div></div>
                     </div>
                     <div class="mt-3 grid grid-cols-2 gap-3">
                         <div>
@@ -2140,9 +2315,9 @@
                 <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
                     <div class="flex items-center justify-between">
                         <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Cintura & RCE</span>
-                        <div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center">
+                        <div class="flex items-center gap-2"><button type="button" onclick="openEntryModal('body')" class="px-2.5 py-1.5 rounded-lg text-[11px] font-semibold bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-1"><i class="fa-solid fa-circle-plus"></i> Registrar</button><div class="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center">
                             <i class="fa-solid fa-ruler-horizontal"></i>
-                        </div>
+                        </div></div>
                     </div>
                     <div class="mt-3 flex items-baseline justify-between gap-2">
                         <div>
@@ -2162,18 +2337,24 @@
         </section>
 
         <!-- GRID PRINCIPAL: FORMULÁRIO À ESQUERDA E GRÁFICOS À DIREITA -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="contents lg:grid lg:grid-cols-12 gap-6 items-start">
             
-            <!-- 2. FORMULÁRIO DE REGISTRO -->
-            <section class="lg:col-span-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+            <!-- 2. FORMULÁRIO DE REGISTRO (janela flutuante) -->
+            <div id="entry-modal" class="no-print fixed inset-0 z-40 hidden items-end sm:items-center justify-center bg-slate-900/60 backdrop-blur-sm sm:p-4" onclick="if (event.target === this) closeEntryModal()">
+            <section class="w-full sm:max-w-lg max-h-[92vh] overflow-y-auto bg-white dark:bg-slate-800 rounded-t-2xl sm:rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl">
                 <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/50">
                     <div class="flex items-center gap-2">
                         <i class="fa-solid fa-circle-plus text-teal-600 dark:text-teal-400"></i>
                         <h2 id="form-title" class="font-bold text-sm sm:text-base text-slate-900 dark:text-white">Novo Registro</h2>
                     </div>
-                    <button type="button" id="cancel-edit-btn" onclick="resetForm()" class="hidden text-xs font-medium text-rose-600 hover:underline">
-                        Cancelar Edição
-                    </button>
+                    <div class="flex items-center gap-3">
+                        <button type="button" id="cancel-edit-btn" onclick="closeEntryModal()" class="hidden text-xs font-medium text-rose-600 hover:underline">
+                            Cancelar Edição
+                        </button>
+                        <button type="button" onclick="closeEntryModal()" aria-label="Fechar" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-600 dark:text-slate-300 flex items-center justify-center">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <form id="health-form" class="p-5 space-y-5">
@@ -2350,9 +2531,10 @@
                     </button>
                 </form>
             </section>
+            </div>
 
             <!-- 3. GRÁFICOS INTERATIVOS -->
-            <section class="lg:col-span-7 space-y-6">
+            <section id="view-graficos" class="hidden lg:block lg:col-span-12 space-y-6">
                 
                 <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm flex flex-wrap items-center justify-between gap-3">
                     <div class="flex items-center gap-2">
@@ -2415,7 +2597,7 @@
         </div>
 
         <!-- 4. HISTÓRICO E GERENCIAMENTO DE DADOS -->
-        <section class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+        <section id="view-historico" class="hidden lg:block bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
             <div class="p-5 border-b border-slate-200 dark:border-slate-700 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                 <div>
                     <h2 class="font-bold text-base text-slate-900 dark:text-white flex flex-wrap items-center gap-2">
@@ -2462,7 +2644,9 @@
                 </div>
             </div>
 
-            <div class="overflow-x-auto">
+            <div id="history-cards" class="md:hidden divide-y divide-slate-200 dark:divide-slate-700"></div>
+
+            <div class="hidden md:block overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr class="bg-slate-50 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -2487,7 +2671,7 @@
                 </div>
                 <h3 class="text-base font-semibold text-slate-900 dark:text-white">Nenhum registro encontrado</h3>
                 <p class="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto mt-1">
-                    Preencha o formulário acima para iniciar o acompanhamento.
+                    Toque em “Novo registro” para iniciar o acompanhamento.
                 </p>
             </div>
         </section>
@@ -2522,6 +2706,7 @@
             setupProfileFormListener();
             setupModalListeners();
             renderAll();
+            showView('resumo');
             renderBackupBanner();
             initStorage();
             window.addEventListener('resize', () => { clearTimeout(window.__rz); window.__rz = setTimeout(renderCharts, 150); });
@@ -2791,6 +2976,13 @@
                 } else {
                     const newProf = { id: `prof_${Date.now()}`, name, relation, height, targetWeight, targetWaist, targetCalories, targetWater, birthdate, color };
                     profiles.push(newProf);
+                    const currentWeight = getNumVal('prof-current-weight');
+                    if (currentWeight) {
+                        const now = new Date();
+                        const iso = `${dateKey(now)}T${pad2(now.getHours())}:${pad2(now.getMinutes())}`;
+                        allRecords.push(normalizeRecord({ datetime: iso, weight: currentWeight, profileId: newProf.id }, newProf.id));
+                        saveRecords();
+                    }
                     activeProfileId = newProf.id;
                     localStorage.setItem(ACTIVE_PROFILE_KEY, activeProfileId);
                     showToast(`Perfil criado e selecionado!`);
@@ -2816,6 +3008,7 @@
             document.getElementById('prof-target-calories').value = prof.targetCalories || '';
             document.getElementById('prof-target-water').value = prof.targetWater || '';
             document.getElementById('prof-birthdate').value = prof.birthdate || '';
+            document.getElementById('prof-current-weight-wrap').classList.add('hidden');
 
             const colorRadio = document.querySelector(`input[name="prof-color"][value="${prof.color}"]`);
             if (colorRadio) colorRadio.checked = true;
@@ -2828,6 +3021,7 @@
         function resetProfileForm() {
             document.getElementById('profile-form').reset();
             document.getElementById('prof-id').value = '';
+            document.getElementById('prof-current-weight-wrap').classList.remove('hidden');
             document.getElementById('profile-form-title').textContent = 'Adicionar Novo Membro';
             document.getElementById('save-profile-btn').innerHTML = '<i class="fa-solid fa-user-plus"></i> <span>Salvar Perfil</span>';
             document.getElementById('cancel-profile-edit').classList.add('hidden');
@@ -2901,24 +3095,34 @@
             if (icon) icon.className = isDark ? 'fa-solid fa-sun text-amber-400' : 'fa-solid fa-moon text-slate-600';
         }
 
-        function showToast(message, type = 'success') {
+        function showToast(message, type = 'success', action = null) {
             const container = document.getElementById('toast-container');
             if (!container) return;
             const toast = document.createElement('div');
             const colors = { success: 'bg-teal-600 text-white', error: 'bg-rose-600 text-white', info: 'bg-slate-800 text-white' };
             toast.className = `${colors[type] || colors.info} px-4 py-3 rounded-xl shadow-lg flex items-center gap-2.5 text-sm font-medium transform transition-all duration-300 translate-y-2 opacity-0 pointer-events-auto`;
             toast.innerHTML = `<i class="fa-solid fa-circle-check"></i><span>${message}</span>`;
+            const dismiss = () => { toast.classList.add('translate-y-2', 'opacity-0'); setTimeout(() => toast.remove(), 300); };
+            if (action) {
+                toast.classList.add('pointer-events-auto');
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'ml-2 px-2.5 py-1 rounded-lg bg-white/20 hover:bg-white/30 font-bold text-xs uppercase tracking-wide';
+                btn.textContent = action.label;
+                btn.onclick = () => { action.fn(); dismiss(); };
+                toast.appendChild(btn);
+            }
             container.appendChild(toast);
             requestAnimationFrame(() => toast.classList.remove('translate-y-2', 'opacity-0'));
-            setTimeout(() => {
-                toast.classList.add('translate-y-2', 'opacity-0');
-                setTimeout(() => toast.remove(), 300);
-            }, 3500);
+            setTimeout(dismiss, action ? 7000 : 3500);
         }
 
-        function openConfirmModal(title, message, callback) {
+        function openConfirmModal(title, message, callback, opts = {}) {
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-message').textContent = message;
+            const cb = document.getElementById('modal-confirm');
+            cb.textContent = opts.label || 'Confirmar';
+            cb.className = 'px-4 py-2 rounded-xl text-white text-xs font-semibold transition ' + (opts.tone === 'teal' ? 'bg-teal-600 hover:bg-teal-700' : 'bg-rose-600 hover:bg-rose-700');
             pendingModalAction = callback;
             const modal = document.getElementById('confirm-modal');
             modal.classList.remove('hidden');
@@ -3002,22 +3206,97 @@
                     return;
                 }
 
-                if (entryId) {
-                    const idx = allRecords.findIndex(r => r.id === entryId);
-                    if (idx !== -1) {
-                        allRecords[idx] = entryData;
-                        showToast('Registro atualizado com sucesso!');
+                const commit = () => {
+                    if (entryId) {
+                        const idx = allRecords.findIndex(r => r.id === entryId);
+                        if (idx !== -1) {
+                            allRecords[idx] = entryData;
+                            showToast('Registro atualizado com sucesso!');
+                        }
+                    } else {
+                        allRecords.push(entryData);
+                        showToast('Registro salvo com sucesso!');
                     }
-                } else {
-                    allRecords.push(entryData);
-                    showToast('Registro salvo com sucesso!');
-                }
+                    saveRecords();
+                    closeEntryModal();
+                    renderAll();
+                };
 
-                saveRecords();
-                resetForm();
-                renderAll();
+                const warns = checkEntry(entryData);
+                if (warns.length) {
+                    openConfirmModal('Confira os valores', warns.map(x => '• ' + x).join('\n') + '\n\nDeseja salvar mesmo assim?', commit, { label: 'Salvar mesmo assim', tone: 'teal' });
+                } else {
+                    commit();
+                }
             });
         }
+
+        function checkEntry(e) {
+            const w = [];
+            const prof = getActiveProfile();
+            const prev = getProfileRecords().find(r => r.id !== e.id && r.weight !== null && r.datetime <= e.datetime);
+            if (e.weight !== null) {
+                if (e.weight < 30 || e.weight > 250) w.push(`Peso de ${fmtNum(e.weight)} kg está fora do usual.`);
+                if (prof && prof.height && Math.abs(e.weight - prof.height) <= 1) w.push(`O peso (${fmtNum(e.weight)} kg) é igual à altura cadastrada (${prof.height} cm). Os valores podem ter sido trocados.`);
+                else if (prev && Math.abs(e.weight - prev.weight) > Math.max(5, prev.weight * 0.08)) w.push(`O peso difere ${fmtNum(Math.abs(e.weight - prev.weight))} kg do último registro (${fmtNum(prev.weight)} kg).`);
+            }
+            if (e.systolic !== null && e.diastolic !== null && e.systolic <= e.diastolic) w.push('A pressão sistólica (máxima) deveria ser maior que a diastólica (mínima).');
+            if (e.systolic !== null && (e.systolic < 70 || e.systolic > 220)) w.push(`Sistólica de ${e.systolic} mmHg está fora do usual.`);
+            if (e.diastolic !== null && (e.diastolic < 40 || e.diastolic > 130)) w.push(`Diastólica de ${e.diastolic} mmHg está fora do usual.`);
+            if (e.bpm !== null && (e.bpm < 35 || e.bpm > 200)) w.push(`Frequência cardíaca de ${e.bpm} bpm está fora do usual.`);
+            if (e.glucose !== null && (e.glucose < 40 || e.glucose > 400)) w.push(`Glicemia de ${e.glucose} mg/dL está fora do usual.`);
+            if (e.bodyfat !== null && (e.bodyfat < 3 || e.bodyfat > 70)) w.push(`Gordura corporal de ${e.bodyfat}% está fora do usual.`);
+            if (e.water !== null && e.water > 5) w.push(`${fmtNum(e.water, 2)} L de água em um único registro parece muito.`);
+            if (e.calories !== null && e.calories > 5000) w.push(`${e.calories} kcal em um único registro parece muito.`);
+            if (e.sleepHours !== null && e.sleepHours > 16) w.push(`${e.sleepHours} h de sono parece muito.`);
+            return w;
+        }
+
+        function showView(v) {
+            ['resumo', 'graficos', 'historico'].forEach(k => {
+                const el = document.getElementById('view-' + k);
+                if (el) el.classList.toggle('hidden', k !== v);
+                const b = document.getElementById('nav-' + k);
+                if (b) {
+                    b.classList.toggle('text-teal-600', k === v);
+                    b.classList.toggle('dark:text-teal-400', k === v);
+                    b.classList.toggle('text-slate-500', k !== v);
+                    b.classList.toggle('dark:text-slate-400', k !== v);
+                    if (k === v) b.setAttribute('aria-current', 'page'); else b.removeAttribute('aria-current');
+                }
+            });
+            window.scrollTo({ top: 0 });
+            if (v === 'graficos') renderCharts();
+        }
+
+        function showEntryModal() {
+            const m = document.getElementById('entry-modal');
+            m.classList.remove('hidden'); m.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function openEntryModal(tab) {
+            if (!document.getElementById('entry-id').value) resetForm();
+            switchFormTab(tab || 'vitals');
+            showEntryModal();
+            setTimeout(() => {
+                const first = { vitals: 'systolic', body: 'weight', habits: 'water' }[tab || 'vitals'];
+                const el = document.getElementById(first);
+                if (el) el.focus({ preventScroll: true });
+            }, 50);
+        }
+
+        function closeEntryModal() {
+            const m = document.getElementById('entry-modal');
+            m.classList.add('hidden'); m.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            resetForm();
+        }
+
+        document.addEventListener('keydown', e => {
+            const m = document.getElementById('entry-modal');
+            if (e.key === 'Escape' && m && !m.classList.contains('hidden')) closeEntryModal();
+        });
 
         function resetForm() {
             document.getElementById('health-form').reset();
@@ -3052,18 +3331,21 @@
             document.getElementById('form-title').textContent = `Editando Registro — ${getActiveProfile().name}`;
             document.getElementById('submit-btn').innerHTML = '<i class="fa-solid fa-check"></i><span>Atualizar Registro</span>';
             document.getElementById('cancel-edit-btn').classList.remove('hidden');
-            document.getElementById('health-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            switchFormTab('vitals');
+            showEntryModal();
         }
 
         function requestDeleteRecord(id) {
-            openConfirmModal('Excluir Registro', 'Deseja realmente excluir este registro?', () => {
-                allRecords = allRecords.filter(r => r.id !== id);
-                saveRecords();
-                renderAll();
-                showToast('Registro excluído.', 'info');
+            const rec = allRecords.find(r => r.id === id);
+            if (!rec) return;
+            allRecords = allRecords.filter(r => r.id !== id);
+            saveRecords();
+            renderAll();
+            showToast('Registro excluído.', 'info', {
+                label: 'Desfazer',
+                fn: () => { allRecords.push(rec); saveRecords(); renderAll(); showToast('Registro restaurado.'); }
             });
         }
-
 
         function pad2(n) { return String(n).padStart(2, '0'); }
         function dayKey(iso) { return String(iso).slice(0, 10); }
@@ -3571,6 +3853,8 @@
             const emptyState = document.getElementById('empty-state');
             document.getElementById('total-records-badge').textContent = records.length;
             tbody.innerHTML = '';
+            const cards = document.getElementById('history-cards');
+            cards.innerHTML = '';
 
             if (records.length === 0) {
                 emptyState.classList.remove('hidden');
@@ -3584,15 +3868,37 @@
 
                 const vitals = (rec.systolic && rec.diastolic) ? `${rec.systolic}/${rec.diastolic} mmHg` : '-';
                 const weight = rec.weight ? `${rec.weight} kg` : '-';
-                const waist = rec.waist ? `Cint: ${rec.waist}cm` : '-';
-                const habits = [rec.water ? `${rec.water}L` : '', rec.calories ? `${rec.calories}kcal` : ''].filter(Boolean).join(' • ') || '-';
+                const waist = [rec.waist ? `Cint: ${rec.waist}cm` : '', rec.abdomen ? `Abd: ${rec.abdomen}cm` : ''].filter(Boolean).join(' • ') || '-';
+                const habits = [rec.water ? `${rec.water}L` : '', rec.calories ? `${rec.calories}kcal` : '', rec.sleepHours ? `${rec.sleepHours}h sono` : ''].filter(Boolean).join(' • ') || '-';
+
+                const item = (label, val, wide) => val ? `<div class="${wide ? 'col-span-2' : ''}"><p class="text-[10px] uppercase tracking-wide text-slate-400">${label}</p><p class="text-xs font-medium text-slate-800 dark:text-slate-100">${val}</p></div>` : '';
+                const card = document.createElement('div');
+                card.className = 'px-4 py-3';
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <p class="text-xs font-bold text-slate-900 dark:text-white">${dateStr}</p>
+                        <div class="flex items-center gap-1">
+                            <button onclick="editRecord('${esc(rec.id)}')" aria-label="Editar" class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 flex items-center justify-center"><i class="fa-solid fa-pen"></i></button>
+                            <button onclick="requestDeleteRecord('${esc(rec.id)}')" aria-label="Excluir" class="w-9 h-9 rounded-lg bg-rose-50 dark:bg-rose-900/20 text-rose-600 flex items-center justify-center"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                    <div class="mt-2 grid grid-cols-2 gap-x-4 gap-y-2">
+                        ${item('Pressão', rec.systolic && rec.diastolic ? `${rec.systolic}/${rec.diastolic} mmHg${rec.bpm ? ` · ${rec.bpm} bpm` : ''}` : (rec.bpm ? `${rec.bpm} bpm` : ''))}
+                        ${item('Glicemia', rec.glucose ? `${rec.glucose} mg/dL` : '')}
+                        ${item('Peso', rec.weight ? `${rec.weight} kg${rec.bodyfat ? ` · ${rec.bodyfat}% gordura` : ''}` : '')}
+                        ${item('Medidas', [rec.waist ? `cintura ${rec.waist} cm` : '', rec.abdomen ? `abdômen ${rec.abdomen} cm` : ''].filter(Boolean).join(' · '))}
+                        ${item('Hábitos', habits === '-' ? '' : habits)}
+                        ${item('Atividade', esc(rec.activity), true)}
+                        ${item('Observações', esc(rec.notes), true)}
+                    </div>`;
+                cards.appendChild(card);
 
                 const tr = document.createElement('tr');
                 tr.className = 'hover:bg-slate-50/80 dark:hover:bg-slate-700/30 transition';
                 tr.innerHTML = `
                     <td class="py-3 px-4 font-medium text-xs whitespace-nowrap">${dateStr}</td>
                     <td class="py-3 px-4 text-xs whitespace-nowrap">${vitals} ${rec.bpm ? `(${rec.bpm}bpm)` : ''}${rec.glucose ? `<div class="text-slate-500">Glic: ${rec.glucose} mg/dL</div>` : ''}</td>
-                    <td class="py-3 px-4 text-xs whitespace-nowrap">${weight}</td>
+                    <td class="py-3 px-4 text-xs whitespace-nowrap">${weight}${rec.bodyfat ? ` · ${rec.bodyfat}%` : ''}</td>
                     <td class="py-3 px-4 text-xs">${waist}</td>
                     <td class="py-3 px-4 text-xs">${habits}</td>
                     <td class="py-3 px-4 text-xs">${esc(rec.activity) || '-'}</td>
